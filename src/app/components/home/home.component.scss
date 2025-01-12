@@ -1,0 +1,140 @@
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* يغطي كامل الشاشة */
+}
+
+.nav-link:hover {
+    color: rgb(207, 207, 207) !important;
+    // color: rgb(206, 17, 17) !important;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.parent {
+    height: 100%; /* أو أي ارتفاع مناسب */
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 0.7vw 1.5vw; /* يعتمد على عرض الشاشة */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    background-color: #6db741;
+    color: white;
+}
+
+button:hover {
+    background-color: #014912;
+}
+
+.bold {
+    font-weight: bold;
+    color: #6db741;
+}
+
+.home {
+    background-image: url(../../../assets/10-01.png);
+    background-position: center; /* لضمان تمركز الصورة */
+    background-size: cover; /* تمدد الصورة لتناسب العنصر بالكامل */
+    background-repeat: no-repeat; /* لا تكرار للصورة */
+    height: 100vh;
+}
+
+
+nav{
+    z-index: 5;
+}
+
+
+
+.content {
+    position: absolute;
+    display: flex; /* يجعل المحتوى داخله مرنًا */
+    flex-direction: column; /* يجعل النصوص والأزرار في عمود */
+    justify-content: center; /* يحاذي المحتوى عموديًا */
+    align-items: center; /* يحاذي المحتوى أفقيًا */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    left: 68%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%; /* يضمن أن النصوص لا تتجاوز الشاشة */
+}
+
+
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+
+}
+
+
+
+
+
+/* للشاشات الصغيرة جدًا (الموبايلات) */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1rem; /* تقليل حجم الخط */
+    }
+
+    .content {
+        padding: 10px; /* تقليل المسافة الداخلية */
+        max-width: 100%;
+    }
+
+    button {
+        font-size: 1.2rem; /* تصغير حجم الأزرار */
+        // padding: 10px 20px;
+    }
+}
+
+/* للشاشات المتوسطة (تابلت) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        // padding: 12px 22px;
+    }
+}
+
+/* للشاشات الكبيرة (ديسكتوب) */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+    .setPadding{
+        padding: 0px 70px;
+    }
+}
