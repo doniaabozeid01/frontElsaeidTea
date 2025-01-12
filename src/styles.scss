@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+    direction: rtl; /* لجعل النصوص والاتجاه من اليمين لليسار */
+    text-align: right; /* محاذاة النصوص إلى اليمين */
+    font-family: 'Tajawal', Arial, sans-serif; /* خط مناسب للغة العربية */
+  }
 
+  
 .active-link{
     padding: 5px;
     background-color: red;
