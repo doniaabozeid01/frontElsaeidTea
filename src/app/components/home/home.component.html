@@ -17,19 +17,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white" [routerLink]="" fragment="home">الصفحه الرئيسيه</a>
+                        <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="home">الصفحه الرئيسيه</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" [routerLink]="" fragment="view-product">عرض المنتج</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white" [routerLink]="" fragment="view-product">عرض المنتج</a>
+                        <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" [routerLink]="" fragment="shop">تسوق</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLinkActive="active-link" routerLink="cart"></i>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white" [routerLink]="" fragment="shop">تسوق</a>
-                    </li>
-                    <li class="nav-item">
-                        <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLink="cart"></i>
-                    </li>
-                    <li class="nav-item">
-                        <i class=" nav-link fa-solid fa-user fs-5 text-white" routerLink="/login"></i>
+                        <i class=" nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link" routerLink="/login"></i>
                     </li>
 
                 </ul>
@@ -44,9 +44,9 @@
 
 
     <div class="position-relative parent"> <!-- هذا العنصر الأب لـ .content -->
-        <div class="position-absolute content">
-            <h1 class="text-white">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو اختيارك المثالي للراحة والدفء.</h1>
-            <button class="btn mt-4">اشتر الان</button>
+        <div class="position-absolute content ">
+            <h1 class="text-white pb-0 mb-3">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو اختيارك المثالي للراحة والدفء.</h1>
+            <button class="btn my-1">اشتر الان</button>
         </div>
     </div>
 </div>

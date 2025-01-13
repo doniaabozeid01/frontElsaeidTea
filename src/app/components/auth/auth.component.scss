@@ -50,3 +50,37 @@
   button:disabled {
     cursor: not-allowed; /* مؤشر غير قابل للنقر */
 }
+
+
+
+
+
+
+
+.auth {
+  direction: ltr!important; /* لجعل النصوص والاتجاه من اليمين لليسار */
+  text-align: left!important; /* محاذاة النصوص إلى اليمين */
+}
+
+
+
+
+
+
+@media (max-width: 768px)  {
+  .login-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
