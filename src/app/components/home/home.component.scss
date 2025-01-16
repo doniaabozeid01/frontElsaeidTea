@@ -20,7 +20,8 @@ video {
 
 
 .parent {
-    height: 100%; /* أو أي ارتفاع مناسب */
+    height: 100%;
+    /* أو أي ارتفاع مناسب */
 }
 
 h1 {
@@ -31,7 +32,8 @@ h1 {
 
 button {
     font-size: 1.5rem;
-    padding: 0.7vw 1.5vw; /* يعتمد على عرض الشاشة */
+    padding: 0.7vw 1.5vw;
+    /* يعتمد على عرض الشاشة */
     border-radius: 8px;
     transition: background-color 0.3s ease;
     background-color: #6db741;
@@ -49,14 +51,17 @@ button:hover {
 
 .home {
     background-image: url(../../../assets/10-01.png);
-    background-position: center; /* لضمان تمركز الصورة */
-    background-size: cover; /* تمدد الصورة لتناسب العنصر بالكامل */
-    background-repeat: no-repeat; /* لا تكرار للصورة */
+    background-position: center;
+    /* لضمان تمركز الصورة */
+    background-size: cover;
+    /* تمدد الصورة لتناسب العنصر بالكامل */
+    background-repeat: no-repeat;
+    /* لا تكرار للصورة */
     height: 100vh;
 }
 
 
-nav{
+nav {
     z-index: 5;
 }
 
@@ -64,25 +69,30 @@ nav{
 
 .content {
     position: absolute;
-    display: flex; /* يجعل المحتوى داخله مرنًا */
-    flex-direction: column; /* يجعل النصوص والأزرار في عمود */
-    justify-content: center; /* يحاذي المحتوى عموديًا */
-    align-items: center; /* يحاذي المحتوى أفقيًا */
+    display: flex;
+    /* يجعل المحتوى داخله مرنًا */
+    flex-direction: column;
+    /* يجعل النصوص والأزرار في عمود */
+    justify-content: center;
+    /* يحاذي المحتوى عموديًا */
+    align-items: center;
+    /* يحاذي المحتوى أفقيًا */
     text-align: center;
     color: white;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    left: 68%; 
+    left: 68%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%; /* يضمن أن النصوص لا تتجاوز الشاشة */
+    max-width: 90%;
+    /* يضمن أن النصوص لا تتجاوز الشاشة */
 }
 
 
 
 
-.logo{
+.logo {
     width: 70px;
     height: 70px;
 
@@ -95,18 +105,21 @@ nav{
 /* للشاشات الصغيرة جدًا (الموبايلات) */
 @media (max-width: 576px) {
     h1 {
-        font-size: 1rem; /* تقليل حجم الخط */
+        font-size: 1rem;
+        /* تقليل حجم الخط */
     }
 
     .content {
-        padding: 10px; /* تقليل المسافة الداخلية */
+        padding: 10px;
+        /* تقليل المسافة الداخلية */
         max-width: 90%;
-        left: 50%; 
+        left: 50%;
 
     }
 
     button {
-        font-size: 1.2rem; /* تصغير حجم الأزرار */
+        font-size: 1.2rem;
+        /* تصغير حجم الأزرار */
         // padding: 10px 20px;
     }
 }
@@ -114,13 +127,13 @@ nav{
 /* للشاشات المتوسطة (تابلت) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .content {
         padding: 8px;
         width: 50%;
-        left: 50%; 
+        left: 50%;
     }
 
     button {
@@ -138,7 +151,8 @@ nav{
     .content {
         padding: 20px;
     }
-    .setPadding{
+
+    .setPadding {
         padding: 0px 70px;
     }
 }
@@ -155,12 +169,15 @@ nav{
 
 
 
-  
-.active-link{
-    padding: 5px;
-    background-color: red;
-    border-radius: 8px; /* إضافة خط أسفل الرابط */
-}
+
+// .active-link{
+//     padding: 8px;
+//     // background-color: #014912;
+//     background-color: #6db741;
+//     border-radius: 8px; /* إضافة خط أسفل الرابط */
+// }
 
 
-
+// .active-link {
+//     border-bottom: 2px solid #6db741;
+// }
