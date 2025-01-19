@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 
 const routes: Routes = [
 
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path:'login' , component : AuthComponent},
   {path:'signup' , component : SignupComponent},
   {path:'cart' , component : CartComponent},
+  {path:'payment' , component : PaymentComponent},
+  {path:'allorders' , component : AllOrdersComponent},
   { path: '', component: HomeComponent }
 
 ];

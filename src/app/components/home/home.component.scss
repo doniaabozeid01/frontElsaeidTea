@@ -181,3 +181,49 @@ nav {
 // .active-link {
 //     border-bottom: 2px solid #6db741;
 // }
+
+
+
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* أسفل الأيقونة */
+    left: -50%;
+    // right:0; /* محاذاة لليمين */
+    // min-width: 100px;
+    z-index: 10;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: inherit; /* لتحافظ على لون النص الحالي */
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline; /* إذا أردت خطًا عند التحويم */
+}
+
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+
+.dropdown-item {
+    color: inherit; /* استخدام اللون الحالي للنص */
+    text-decoration: none; /* إزالة الخط السفلي */
+}
+
+.dropdown-item:focus, 
+.dropdown-item:active {
+    color: inherit; /* إزالة اللون الأزرق */
+    background-color: #15ce40; /* منع تغيير الخلفية */
+    outline: none; /* إزالة الإطار */
+}

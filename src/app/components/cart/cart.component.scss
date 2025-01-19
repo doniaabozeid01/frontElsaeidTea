@@ -1,0 +1,213 @@
+
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px; /* تعديل المسافة بين الاسم والصورة */
+    color: #333;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    color: #388e3c; /* اللون الأخضر المناسب لبيع الشاي */
+}
+
+/* عناصر التحكم في السلة */
+.cart-item-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.item-quantity {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* ملخص السلة */
+/* ملخص السلة */
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+// .summary-item {
+//     color: #333;
+
+// }
+.parent{
+    background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
+    height: 100vh;
+    width: 100%;
+    // background-image: url('../../../assets/b2299e5e54d5b41e5a36e8a71965f3c5.jpg');
+}
+.proceed-to-checkout:hover {
+    color: white;
+    background-color: #27702a; /* تأثير hover عند المرور */
+}
+
+@media (max-width: 768px) {
+    .proceed-to-checkout {
+        width: 55%;  /* الزر سيكون بنفس عرض الشاشة في الشاشات الصغيرة */
+    }
+}
+
+/* تحديث سلة التسوق بحيث لا يتجاوز الارتفاع 90% من الشاشة */
+.cart-container {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تحديد خلفية السلة لتتناسب مع صفحة All Orders */
+.cart-items {
+    max-height: 55vh; /* الحد الأقصى للارتفاع 90% من الشاشة */
+    overflow-y: auto; /* تفعيل التمرير العمودي عند الحاجة */
+    // padding-right: 10px; /* تحسين المسافة الجانبية */
+}
+
+/* شريط التمرير */
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background-color: #388e3c; /* اللون الأخضر ليتماشى مع تصميم الموقع */
+    border-radius: 10px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* تعديل اللون الداخلي للسلة */
+.cart-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* تخفيف الألوان بحيث تتماشى مع تصميم صفحة All Orders */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #daddda;
+    background-color: #fafafa; /* لون فاتح يتماشى مع الخلفية البيضاء */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.cart-item:hover {
+    background-color: #d9ffd2; /* تأثير hover بلون أفتح */
+}
+
+/* تحديث الألوان */
+.cart-item-name, .cart-item-quantity {
+    color: #333; /* نص مظلل بلون متناسق */
+}
+
+.remove-item {
+    background-color: #ff6f61; /* اللون الأحمر المائل إلى الوردي */
+    color: white;
+    padding: 8px 19px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.remove-item:hover {
+    background-color: #d32f2f;
+}
+
+/* الزر عند الانتقال للدفع */
+.proceed-to-checkout {
+    background-color: #388e3c; /* اللون الأخضر المناسب لبيع الشاي */
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 25%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.proceed-to-checkout:hover {
+    color: white;
+    background-color: #27702a; /* تأثير hover عند المرور */
+}
+
+/* زر العودة إلى الصفحة الرئيسية */
+.back-to-home {
+    background-color: #ffffff;
+    color: #388e3c;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 1px solid #388e3c;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #388e3c;
+    color: #ffffff;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .proceed-to-checkout {
+        width: auto; /* عرض الزر يكون تلقائي بناءً على المحتوى */
+        padding: 12px 15px; /* تقليل الحشو بحيث يناسب الزر بشكل أفضل */
+        font-size: 14px;  /* تقليل حجم الخط في الشاشات الصغيرة */
+        margin-top: 10px;  /* إضافة مسافة أعلى الزر */
+    }
+
+
+    .cart-container {
+        max-width: 95%;
+
+    }
+
+}

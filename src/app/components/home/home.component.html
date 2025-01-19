@@ -28,10 +28,31 @@
                     <li class="nav-item">
                         <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLinkActive="active-link" routerLink="/cart"></i>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <i class=" nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link" routerLink="/login"></i>
+                    </li> -->
+                    <li class="nav-item position-relative">
+                        <i 
+                            class="nav-link fa-solid fa-user fs-5 text-white" 
+                            routerLinkActive="active-link" 
+                            routerLink="/login"></i>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
+                            <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
+                            <a 
+                                class="dropdown-item  fw-semibold  px-2 rounded" 
+                                (click)="signIn()">
+                                Sign In
+                            </a>
+                            <a 
+                                class="dropdown-item  fw-semibold  px-2 rounded mb-2" 
+                                (click)="signOut()">
+                                Sign Out
+                            </a>
+                        </div>
+                        
                     </li>
-
+                    
                 </ul>
             </div>
         </div>

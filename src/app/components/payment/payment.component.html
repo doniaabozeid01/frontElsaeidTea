@@ -1,0 +1,59 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <h2 class="checkout-title">تفاصيل الدفع عند الاستلام</h2>
+    <div class="form-group">
+      <label for="name">الاسم الكامل</label>
+      <input id="name" type="text" formControlName="name" class="form-control" />
+      <div *ngIf="orderForm.get('name')?.invalid && orderForm.get('name')?.touched" class="text-danger">
+        الاسم الكامل مطلوب.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="address">العنوان</label>
+      <input id="address" type="text" formControlName="address" class="form-control" />
+      <div *ngIf="orderForm.get('address')?.invalid && orderForm.get('address')?.touched" class="text-danger">
+        العنوان مطلوب.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="city">المدينة</label>
+      <input id="city" type="text" formControlName="city" class="form-control" />
+      <div *ngIf="orderForm.get('city')?.invalid && orderForm.get('city')?.touched" class="text-danger">
+        المدينة مطلوبة.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="country">البلد</label>
+      <input id="country" type="text" formControlName="country" class="form-control" />
+      <div *ngIf="orderForm.get('country')?.invalid && orderForm.get('country')?.touched" class="text-danger">
+        البلد مطلوب.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="phone">رقم الهاتف</label>
+      <input id="phone" type="tel" formControlName="phone" class="form-control" />
+      <div *ngIf="orderForm.get('phone')?.invalid && orderForm.get('phone')?.touched" class="text-danger">
+        رقم الهاتف مطلوب ويجب أن يكون صحيحًا.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="confirmPhone">تأكيد رقم الهاتف</label>
+      <input id="confirmPhone" type="tel" formControlName="confirmPhone" class="form-control" />
+      <div *ngIf="orderForm.get('confirmPhone')?.invalid && orderForm.get('confirmPhone')?.touched" class="text-danger">
+        يجب أن يكون رقم الهاتف مؤكدًا.
+      </div>
+      <div *ngIf="phoneMismatch" class="text-danger">
+        رقم الهاتف وتأكيد رقم الهاتف لا يتطابقان.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="orderForm.invalid" class="btn btn-success" >
+      تأكيد الطلب
+    </button>
+
+  </form>
+  

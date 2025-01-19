@@ -7,9 +7,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ViewProductComponent } from './components/view-product/view-product.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { AuthComponent } from './components/auth/auth.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,15 @@ import { CartComponent } from './components/cart/cart.component';
     ShopComponent,
     AuthComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent,
+    AllOrdersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

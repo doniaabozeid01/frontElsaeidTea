@@ -1,1 +1,32 @@
-<p>cart works!</p>
+
+<div class="parent m-0 p-0 pt-5">
+
+    <div class="cart-container ">
+        <h2 class="cart-title">سلة التسوق</h2>
+        <div class="cart-items">
+            <!-- عنصر من السلة -->
+            <div class="cart-item" *ngFor="let item of cartItems">
+                <img src="{{ item.image }}" alt="صورة المنتج" class="cart-item-image ms-3 me-0 p-0">
+                <div class="cart-item-details">
+                    <p class="cart-item-name">{{ item.name }}</p>
+                    <p class="cart-item-quantity">جرام {{ item.weight }}</p>
+                    <p class="cart-item-price">د.ك {{ item.price }}</p>
+                </div>
+                <div class="cart-item-actions">
+                    <input type="number" [(ngModel)]="item.quantity" class="item-quantity">
+                    <button class="btn remove-item" (click)="removeItem(item)">إزالة</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-summary">
+            <p class="summary-item p-0 m-0">
+                <strong>المجموع:</strong> د.ك {{ getTotalPrice() }}
+            </p>
+            <button class="btn proceed-to-checkout" routerLink="/payment">الانتقال إلى الدفع</button>
+        </div>
+        
+        <button class="btn back-to-home mt-5" routerLink="/">العودة إلى الصفحة الرئيسية</button>
+    </div>
+    
+</div>
