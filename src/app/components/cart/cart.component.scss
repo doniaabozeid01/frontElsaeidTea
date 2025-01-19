@@ -42,9 +42,6 @@
 }
 
 
-
-/* ملخص السلة */
-/* ملخص السلة */
 .cart-summary {
     display: flex;
     justify-content: space-between;
@@ -54,16 +51,17 @@
     font-weight: 500;
 }
 
-// .summary-item {
-//     color: #333;
 
-// }
-.parent{
+.parent {
     background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
     height: 100vh;
     width: 100%;
-    // background-image: url('../../../assets/b2299e5e54d5b41e5a36e8a71965f3c5.jpg');
+    background-image: url('../../../assets/img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
+    background-position: center; /* محاذاة الصورة في المنتصف */
 }
+
 .proceed-to-checkout:hover {
     color: white;
     background-color: #27702a; /* تأثير hover عند المرور */
@@ -80,9 +78,11 @@
     max-width: 800px;
     margin: 0px auto;
     padding: 20px;
-    background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
+    background-color: rgba(255,255,255,0.9);
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    // border: 1px solid green;
+    border: 1px solid greenyellow;
 }
 
 /* تحديد خلفية السلة لتتناسب مع صفحة All Orders */
@@ -97,14 +97,21 @@
     width: 6px;
 }
 
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1; /* اجعل الأسهم ظاهرة دائمًا */
+  display: block; /* تأكد من أنها مرئية */
+}
+
+
+
 .cart-items::-webkit-scrollbar-thumb {
     background-color: #388e3c; /* اللون الأخضر ليتماشى مع تصميم الموقع */
     border-radius: 10px;
 }
 
-.cart-items::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-}
+
 
 /* تعديل اللون الداخلي للسلة */
 .cart-title {
@@ -112,7 +119,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 30px;
-    color: #333;
+    color: #4caf50;
 }
 
 /* تخفيف الألوان بحيث تتماشى مع تصميم صفحة All Orders */
@@ -178,7 +185,7 @@
     color: #388e3c;
     padding: 10px 20px;
     font-size: 14px;
-    border: 1px solid #388e3c;
+    // border: 1px solid #388e3c;
     border-radius: 6px;
     cursor: pointer;
     display: block;

@@ -1,76 +1,189 @@
-<div class="position-relative home" id="home">
-    <nav class="navbar navbar-expand-lg position-fixed w-100 navbar">
-        <div class="container-fluid setPadding">
-            <div class=" d-flex justify-content-center align-items-center">
-                <div class="logo">
-                    <img src="../../../assets/logo.png" class="w-100" alt="">
+
+
+<section class="container-homePage ">
+
+
+
+    <section class="position-relative home" id="home">
+        <nav class="navbar navbar-expand-lg position-fixed w-100 navbar">
+            <div class="container-fluid setPadding">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="logo">
+                        <img src="../../../assets/logo.png" class="w-100" alt="">
+                    </div>
+                    <a class="navbar-brand fs-4 text-white ms-3" routerLink="/home">شاي الصعيد</a>
                 </div>
-                <a class="navbar-brand fs-4 text-white ms-3" routerLink="/home">شاي الصعيد</a>
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-white" routerLinkActive="active-link"
+                               routerLink="/home">الصفحه الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-white" routerLinkActive="active-link"
+                               routerLink="/about">حول</a>
+                        </li>
+                        <li class="nav-item">
+                            <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLinkActive="active-link"
+                               routerLink="/cart"></i>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <i class="nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link"
+                               routerLink="/login"></i>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
+                                <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
+                                <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">Sign In</a>
+                                <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        </nav>
+        
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
-                    <li class="nav-item">
-                        <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/home">الصفحه الرئيسيه</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" [routerLink]="" fragment="view-product">عرض المنتج</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" [routerLink]="" fragment="shop">تسوق</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLinkActive="active-link" routerLink="/cart"></i>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <i class=" nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link" routerLink="/login"></i>
-                    </li> -->
-                    <li class="nav-item position-relative">
-                        <i 
-                            class="nav-link fa-solid fa-user fs-5 text-white" 
-                            routerLinkActive="active-link" 
-                            routerLink="/login"></i>
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
-                            <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
-                            <a 
-                                class="dropdown-item  fw-semibold  px-2 rounded" 
-                                (click)="signIn()">
-                                Sign In
-                            </a>
-                            <a 
-                                class="dropdown-item  fw-semibold  px-2 rounded mb-2" 
-                                (click)="signOut()">
-                                Sign Out
-                            </a>
+
+
+        <video src="../../../assets/WhatsApp Video 2025-01-12 at 4.07.05 AM.mp4" autoplay loop muted
+            playsinline></video>
+
+
+        <div class="position-relative parent"> <!-- هذا العنصر الأب لـ .content -->
+            <div class="position-absolute content ">
+                <h1 class="text-white pb-0 mb-3">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو
+                    اختيارك
+                    المثالي للراحة والدفء.</h1>
+                <button class="btn my-1 greenBtn" >اشتر الان</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="w-100 bg-light">
+        <section class="product-page   py-5">
+            <div class="row g-3 ">
+
+                <div class="col-md-7">
+                    <div class="row g-3">
+                        <div class="col-md-6 tr">
+                            <img src="../../../assets/2-copy.jpg" class="w-100 h-100" alt="">
                         </div>
-                        
-                    </li>
-                    
-                </ul>
+                        <div class="col-md-6 tl">
+                            <img src="../../../assets/22-copy.jpg" class="w-100 h-100 " alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-3 b">
+                        <img src="../../../assets/222-ccopy.jpg" class="w-100 h-100" alt="">
+                    </div>
+                </div>
+
+
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center ">
+                    <!-- توسيط المحتوى داخل العمود -->
+                    <h1>شاي الصعيد الفاخر</h1>
+                    <p class="fs-6">استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب. هذا الشاي مصنوع
+                        من
+                        أجود
+                        الأوراق الطبيعية.</p>
+                    <h3>السعر: 100 دينار كويتي</h3>
+
+                    <div class="d-flex mt-2">
+
+                        <div class="coverIcon " (click)="add()">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                        <p class="fs-3 mb-0 pb-0 px-2">{{count}}</p>
+
+                        <div class="coverIcon " (click)="minus()">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+
+                    </div>
+
+                    <button class="btn mt-3 px-4 greenBtn" [routerLink]="'product-details'">عرض التفاصيل</button>
+                    <!-- زر اشترِ الآن -->
+                </div>
+
+
             </div>
+        </section>
+
+    </section>
+
+
+
+    <section class="vlog">
+
+        <div class="video-container py-5">
+            <video autoplay muted loop class="background-video">
+                <source src="../../../assets/Comp 1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
         </div>
-    </nav>
-
-    
-
-    <video src="../../../assets/WhatsApp Video 2025-01-12 at 4.07.05 AM.mp4" autoplay
-        loop muted playsinline></video>
+    </section>
 
 
-    <div class="position-relative parent"> <!-- هذا العنصر الأب لـ .content -->
-        <div class="position-absolute content ">
-            <h1 class="text-white pb-0 mb-3">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو اختيارك المثالي للراحة والدفء.</h1>
-            <button class="btn my-1">اشتر الان</button>
+
+
+
+
+
+    <div id="carouselExampleIndicators" class="carousel slide  m-auto">
+        <div class="carousel-indicators  m-0 p-0 d-none">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
         </div>
+        <div class="carousel-inner  ">
+            <div class="carousel-item active ">
+                <div class="text-center  w-75 p-5 m-auto">
+                    <h3>احمد علي</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, deserunt quis nesciunt incidunt
+                        magnam quisquam odit quos? Ipsam quae nisi corrupti accusamus nostrum! Architecto optio dolor
+                        nisi
+                        fugiat expedita sapiente!</p>
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="text-center  w-75 p-5 m-auto">
+                    <h3>احمد علي</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, deserunt quis nesciunt incidunt
+                        magnam quisquam odit quos? Ipsam quae nisi corrupti accusamus nostrum! Architecto optio dolor
+                        nisi
+                        fugiat expedita sapiente!</p>
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon  crsol" aria-hidden="true"></span>
+            <span class="visually-hidden ">Previous</span>
+        </button>
+        <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon  crsol" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</div>
 
 
 
@@ -80,21 +193,32 @@
 
 
 
+    <section class="footer">
+        <h2>شاي الصعيد</h2>
+        <p>أفضل شاي من قلب الصعيد، طعم لا يُنسى</p>
+
+        <!-- تفاصيل إضافية -->
+        <div class="details">
+            <p>موقع "شاي الصعيد" هو وجهتك الأولى لتذوق أفضل أنواع الشاي التقليدي المستوحى من ثقافة الصعيد المصري. نحن
+                نقدم لك تجربة فريدة تتيح لك الاستمتاع بتذوق الشاي في أجواء أصيلة وأصيلة. نستخدم أجود أنواع الأوراق من
+                الأراضي الصعيدية لنتيح لك مذاقًا مميزًا وطبيعيًا.</p>
+            <p>يتميز شاي الصعيد بطعمه العميق والمميز الذي يعكس جودة الزراعة في الأراضي الخصبة وبدون إضافات صناعية. نحن
+                في "شاي الصعيد" نسعى لتقديم أفضل المنتجات التي تمثل تراثنا العريق في كل فنجان شاي.</p>
+            <p>كما نقدم خدمة توصيل ممتازة لجميع العملاء في أنحاء الجمهورية. إذا كان لديك أي استفسار أو تحتاج إلى
+                المساعدة، لا تتردد في التواصل معنا عبر الطرق التالية.</p>
+        </div>
+
+        <!-- معلومات التواصل -->
+        <div class="contact-info">
+            <p><span>البريد الإلكتروني:</span> <a href="mailto:info@shayalsaeed.com"
+                    style="color: #f1f1f1;">info@shayalsaeed.com</a></p>
+            <p><span>رقم الهاتف:</span> +20 100 123 4567</p>
+            <p><span>العنوان:</span> شارع النيل، محافظة أسيوط، الصعيد، مصر</p>
+        </div>
+
+        <p>&copy; 2025 جميع الحقوق محفوظة</p>
+    </section>
 
 
 
-
-
-
-
-
-
-
-
-    <!-- <video src="../../../assets/4783455_tea_cup_of_tea_pot_of_tea_23051902Britishness4k0071080p12000br.mp4" autoplay
-        loop muted playsinline></video> -->
-
-        <!-- <img src="" alt=""> -->
-
-
-
+</section>

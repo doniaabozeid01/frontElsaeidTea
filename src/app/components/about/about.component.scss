@@ -1,0 +1,336 @@
+.about-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.about-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.about-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-link:hover {
+    color: rgb(207, 207, 207) !important;
+    // color: rgb(206, 17, 17) !important;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    z-index: 5;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+}
+
+/* للشاشات الصغيرة جدًا (الموبايلات) */
+// @media (max-width: 576px) {
+//     h1 {
+//         font-size: 1rem;
+//         /* تقليل حجم الخط */
+//     }
+
+//     .content {
+//         padding: 10px;
+//         /* تقليل المسافة الداخلية */
+//         max-width: 90%;
+//         left: 50%;
+
+//     }
+
+//     button {
+//         font-size: 1.2rem;
+//         /* تصغير حجم الأزرار */
+//         // padding: 10px 20px;
+//     }
+// }
+
+/* للشاشات المتوسطة (تابلت) */
+// @media (max-width: 768px) {
+//     h1 {
+//         font-size: 2rem;
+//     }
+
+//     .content {
+//         padding: 8px;
+//         width: 50%;
+//         left: 50%;
+//     }
+
+//     button {
+//         font-size: 1.2rem;
+//         // padding: 12px 22px;
+//     }
+// }
+
+/* للشاشات الكبيرة (ديسكتوب) */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .setPadding {
+        padding: 0px 70px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .active-link{
+//     padding: 8px;
+//     // background-color: #014912;
+//     background-color: #6db741;
+//     border-radius: 8px; /* إضافة خط أسفل الرابط */
+// }
+
+
+
+
+.active-link {
+    padding: 8px;
+    border-bottom: 3px solid #6db741;  /* إضافة خط تحت باللون الذي تريده */
+    width: 100%;
+    text-align: center;  /* لتوسيط النص داخل الرابط */
+}
+
+
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* أسفل الأيقونة */
+    left: -50%;
+    // right:0; /* محاذاة لليمين */
+    // min-width: 100px;
+    z-index: 10;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: inherit;
+    /* لتحافظ على لون النص الحالي */
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
+    /* إذا أردت خطًا عند التحويم */
+}
+
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+
+.dropdown-item {
+    color: inherit;
+    /* استخدام اللون الحالي للنص */
+    text-decoration: none;
+    /* إزالة الخط السفلي */
+}
+
+.dropdown-item:focus,
+.dropdown-item:active {
+    color: inherit;
+    /* إزالة اللون الأزرق */
+    background-color: #15ce40;
+    /* منع تغيير الخلفية */
+    outline: none;
+    /* إزالة الإطار */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

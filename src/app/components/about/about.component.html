@@ -1,0 +1,106 @@
+
+<nav class="navbar navbar-expand-lg w-100 navbar">
+    <div class="container-fluid setPadding">
+        <div class=" d-flex justify-content-center align-items-center">
+            <div class="logo">
+                <img src="../../../assets/logo.png" class="w-100" alt="">
+            </div>
+            <a class="navbar-brand fs-4 text-white ms-3" routerLink="/home">شاي الصعيد</a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+                <li class="nav-item">
+                    <a class=" nav-link fs-5 text-white" routerLinkActive="active-link"
+                        routerLink="/home">الصفحه
+                        الرئيسيه</a>
+                </li>
+                <li class="nav-item">
+                <a class=" nav-link fs-5 text-white" routerLinkActive="active-link"
+                        routerLink="/about">حول</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" [routerLink]="" fragment="shop">تسوق</a>
+            </li> -->
+                <li class="nav-item">
+                    <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLinkActive="active-link"
+                        routerLink="/cart"></i>
+                </li>
+                <!-- <li class="nav-item">
+                <i class=" nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link" routerLink="/login"></i>
+            </li> -->
+                <li class="nav-item position-relative">
+                    <i class="nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link"
+                        routerLink="/login"></i>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
+                        <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
+                        <a class="dropdown-item  fw-semibold  px-2 rounded" (click)="signIn()">
+                            Sign In
+                        </a>
+                        <a class="dropdown-item  fw-semibold  px-2 rounded mb-2" (click)="signOut()">
+                            Sign Out
+                        </a>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="about" class="about-section p-0 m-0 mt-4">
+
+
+
+    <div class="container text-center">
+        <h2 class="section-title mb-4">عن شاي الصعيد</h2>
+        <p class="section-description mb-5">
+            شاي الصعيد هو الخيار المثالي لكل من يبحث عن النكهة الأصيلة والجودة العالية. نحرص على تقديم شاي يتميز بالتقاليد المصرية العريقة. جربه الآن واستمتع بكل لحظة.
+        </p>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="about-card">
+                    <img src="path/to/image.jpg" alt="شاي طبيعي" class="img-fluid mb-3">
+                    <h3>شاي طبيعي</h3>
+                    <p>نستخدم أوراق شاي طبيعية بنسبة 100% للحصول على أفضل نكهة.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="about-card">
+                    <img src="path/to/image.jpg" alt="نكهة أصيلة" class="img-fluid mb-3">
+                    <h3>نكهة أصيلة</h3>
+                    <p>نكهة تجمع بين الأصالة والتميز، تعكس تقاليد الشاي المصري العريق.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="about-card">
+                    <img src="path/to/image.jpg" alt="منتج ذو جودة عالية" class="img-fluid mb-3">
+                    <h3>جودة عالية</h3>
+                    <p>نحن نقدم لك شايًا بجودة عالية وبأفضل الممارسات التي تضمن لك تجربة مميزة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

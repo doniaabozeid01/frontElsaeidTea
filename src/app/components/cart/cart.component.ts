@@ -13,6 +13,24 @@ export class CartComponent {
       weight: 250,
       quantity: 1,
       image: '../../../assets/1-01.png'
+    },{
+      name: 'شاي الصعيد',
+      price: 3.000,
+      weight: 250,
+      quantity: 1,
+      image: '../../../assets/1-01.png'
+    },{
+      name: 'شاي الصعيد',
+      price: 3.000,
+      weight: 250,
+      quantity: 1,
+      image: '../../../assets/1-01.png'
+    },{
+      name: 'شاي الصعيد',
+      price: 3.000,
+      weight: 250,
+      quantity: 1,
+      image: '../../../assets/1-01.png'
     }
   ];
   

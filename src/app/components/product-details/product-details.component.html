@@ -1,0 +1,38 @@
+<div class="w-100 parent pt-5">
+    <div class="product-details">
+        <div class="product-info">
+            <img src="../../../assets/c2741a1e-08de-4888-8a00-febbb8bd3324.jpg" alt="منتج شاي الصعيد" class="product-image">
+            <h2 class="product-title">شاي الصعيد</h2>
+            <p class="product-description">أحلى شاي تقليدي من قلب الصعيد.</p>
+            <p class="product-about">
+                هذا الشاي يتم جمعه من أفضل مزارع الصعيد باستخدام طرق تقليدية لضمان أعلى جودة. يأتي هذا الشاي بنكهة غنية وطعم مميز، مما يجعله الاختيار المثالي لمحبي الشاي.
+                يتميز بمذاق قوي وطيب يجعل شاي الصعيد الخيار المثالي للاحتساء في جميع الأوقات.
+            </p>
+        </div>
+
+        <div class="product-size">
+            <h3>اختر الحجم:</h3>
+            <select [(ngModel)]="selectedSize" class="size-select">
+                <option value="250g">ربع كيلو</option>
+                <option value="500g">نصف كيلو</option>
+                <option value="1kg">كيلو</option>
+            </select>
+        </div>
+
+        <div class="product-rating">
+            <h3>تقييم المنتج:</h3>
+            <div class="stars">
+                <i class="fa fa-star star" *ngFor="let star of stars; let i = index"
+                    [ngClass]="{'active': i < selectedRating}" (click)="setRating(i + 1)">
+                </i>
+            </div>
+        </div>
+
+        <div class="product-comment">
+            <h3>أضف تعليقك:</h3>
+            <textarea [(ngModel)]="userComment" placeholder="اكتب تعليقك هنا..." class="comment-text"></textarea>
+        </div>
+
+        <button class="add-to-cart-btn" (click)="addToCart()">أضف إلى السلة</button>
+    </div>
+</div>

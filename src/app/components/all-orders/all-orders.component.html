@@ -1,54 +1,58 @@
-<div class="user-orders-wrapper">
-  <h2 class="page-title pt-4 text-center">طلباتي السابقة</h2>
-  <p class="welcome-msg text-center">مرحبًا {{ userName }}! يمكنك مراجعة تفاصيل طلباتك أدناه.</p>
+<div class="parent bg-info m-0 p-0 pt-5">
 
-  <div class="user-orders-container">
-    <div *ngIf="orders.length > 0; else noOrders">
-      <div class="order-card" *ngFor="let order of orders">
-        <div class="order-header">
-          <h3>طلب رقم: {{ order.orderId }}</h3>
-          <p class="order-date">{{ order.orderDate | date:'mediumDate' }}</p>
+  <div class="user-orders-wrapper ">
+    <h2 class="page-title pt-4 text-center">طلباتي السابقة</h2>
+    <p class="welcome-msg text-center">مرحبًا {{ userName }}! يمكنك مراجعة تفاصيل طلباتك أدناه.</p>
+    
+    <div class="user-orders-container ">
+      <div *ngIf="orders.length > 0; else noOrders">
+        <div class="order-card " *ngFor="let order of orders">
+          <div class="order-header">
+            <h3>طلب رقم: {{ order.orderId }}</h3>
+            <p class="order-date">{{ order.orderDate | date:'mediumDate' }}</p>
+          </div>
+          <div class="order-details">
+            <p><strong>الإجمالي:</strong> {{ order.totalAmount | currency:'EGP' }}</p>
+            <p><strong>الحالة:</strong>
+              <span [ngClass]="getOrderStatusClass(order.status)">
+                {{ order.status }}
+              </span>
+            </p>
+          </div>
+          <button class="details-btn" (click)="viewDetails(order)">عرض التفاصيل</button>
         </div>
-        <div class="order-details">
-          <p><strong>الإجمالي:</strong> {{ order.totalAmount | currency:'EGP' }}</p>
-          <p><strong>الحالة:</strong>
-            <span [ngClass]="getOrderStatusClass(order.status)">
-              {{ order.status }}
-            </span>
-          </p>
+      </div>
+      
+      <ng-template #noOrders>
+        <p class="no-orders-msg">ليس لديك أي طلبات حاليًا. ابدأ التسوق الآن واستمتع بشاي الصعيد!</p>
+      </ng-template>
+    </div>
+    
+    <!-- Modal for showing detailed order info -->
+    <div class="modal" *ngIf="selectedOrder">
+      <div class="modal-content p-4">
+        <span class="close-btn " (click)="closeDetails()">&times;</span>
+        <h3 class="pt-3">تفاصيل الطلب رقم: {{ selectedOrder.orderId }}</h3>
+        <p><strong>تاريخ الطلب:</strong> {{ selectedOrder.orderDate | date:'medium' }}</p>
+        <p><strong>الإجمالي:</strong> {{ selectedOrder.totalAmount | currency:'EGP' }}</p>
+        <p><strong>حالة الطلب:</strong> {{ selectedOrder.status }}</p>
+        <hr>
+        <h4>تفاصيل المنتجات:</h4>
+        <div class="products-list">
+          <ul>
+            <li *ngFor="let item of selectedOrder.items">
+              {{ item.name }} - {{ item.quantity }} × {{ item.price | currency:'EGP' }}
+            </li>
+          </ul>
         </div>
-        <button class="details-btn" (click)="viewDetails(order)">عرض التفاصيل</button>
       </div>
     </div>
-
-    <ng-template #noOrders>
-      <p class="no-orders-msg">ليس لديك أي طلبات حاليًا. ابدأ التسوق الآن واستمتع بشاي الصعيد!</p>
-    </ng-template>
-  </div>
-
-  <!-- Modal for showing detailed order info -->
-  <div class="modal" *ngIf="selectedOrder">
-    <div class="modal-content p-4">
-      <span class="close-btn " (click)="closeDetails()">&times;</span>
-      <h3 class="pt-3">تفاصيل الطلب رقم: {{ selectedOrder.orderId }}</h3>
-      <p><strong>تاريخ الطلب:</strong> {{ selectedOrder.orderDate | date:'medium' }}</p>
-      <p><strong>الإجمالي:</strong> {{ selectedOrder.totalAmount | currency:'EGP' }}</p>
-      <p><strong>حالة الطلب:</strong> {{ selectedOrder.status }}</p>
-      <hr>
-      <h4>تفاصيل المنتجات:</h4>
-      <div class="products-list">
-        <ul>
-          <li *ngFor="let item of selectedOrder.items">
-            {{ item.name }} - {{ item.quantity }} × {{ item.price | currency:'EGP' }}
-          </li>
-        </ul>
-      </div>
+    
+    <!-- زر العودة خارج الـ container -->
+    <div class="text-center">
+      
+      <button class="btn home-btn  m-0 mt-4" (click)="goToHome()">العودة إلى الصفحة الرئيسية</button>
     </div>
   </div>
-
-  <!-- زر العودة خارج الـ container -->
-   <div class="text-center">
-
-     <button class="btn home-btn  m-0 mt-4" (click)="goToHome()">العودة إلى الصفحة الرئيسية</button>
-    </div>
+  
 </div>

@@ -1,0 +1,176 @@
+.product-details {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 800px;  /* لضبط العرض */
+    margin: 0 auto;  /* لضبط المنتصف */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid greenyellow;
+    overflow: hidden;
+}
+
+.product-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-image {
+    width: 200px;  /* لتحديد عرض الصورة */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.product-about {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.product-size select {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.product-rating .stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-rating .star {
+    font-size: 30px;
+    color: #d3d3d3;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.product-rating .star.active {
+    color: #ffd700;
+}
+
+.product-comment textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    height: 120px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    resize: vertical;
+}
+
+.add-to-cart-btn {
+    padding: 12px 30px;
+    background-color: #6db741;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #5a9b36;
+}
+
+.add-to-cart-btn:active {
+    background-color: #4c892e;
+}
+
+.parent {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../../assets/img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-title,
+.product-description {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpText 1s forwards;
+}
+
+@keyframes fadeInUpText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+
+
+
+
+

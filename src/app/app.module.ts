@@ -12,6 +12,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
+import { AboutComponent } from './components/about/about.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AllOrdersComponent } from './components/all-orders/all-orders.component
     SignupComponent,
     CartComponent,
     PaymentComponent,
-    AllOrdersComponent
+    AllOrdersComponent,
+    AboutComponent,
+    NavbarComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

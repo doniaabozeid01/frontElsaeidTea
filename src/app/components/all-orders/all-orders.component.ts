@@ -28,6 +28,46 @@ export class AllOrdersComponent  {
       items: [
         { name: 'شاي الصعيد - 1 كجم', quantity: 1, price: 250 }
       ]
+    },{
+      orderId: '001',
+      orderDate: new Date(),
+      totalAmount: 250,
+      status: 'مؤكد',
+      items: [
+        { name: 'شاي الصعيد - 1 كجم', quantity: 1, price: 250 }
+      ]
+    },{
+      orderId: '001',
+      orderDate: new Date(),
+      totalAmount: 250,
+      status: 'مؤكد',
+      items: [
+        { name: 'شاي الصعيد - 1 كجم', quantity: 1, price: 250 }
+      ]
+    },{
+      orderId: '001',
+      orderDate: new Date(),
+      totalAmount: 250,
+      status: 'مؤكد',
+      items: [
+        { name: 'شاي الصعيد - 1 كجم', quantity: 1, price: 250 }
+      ]
+    },{
+      orderId: '001',
+      orderDate: new Date(),
+      totalAmount: 250,
+      status: 'مؤكد',
+      items: [
+        { name: 'شاي الصعيد - 1 كجم', quantity: 1, price: 250 }
+      ]
+    },{
+      orderId: '001',
+      orderDate: new Date(),
+      totalAmount: 250,
+      status: 'مؤكد',
+      items: [
+        { name: 'شاي الصعيد - 1 كجم', quantity: 1, price: 250 }
+      ]
     },
     {
       orderId: '002',

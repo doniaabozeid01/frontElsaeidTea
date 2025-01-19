@@ -9,6 +9,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
 
@@ -17,9 +19,11 @@ const routes: Routes = [
   // {path:'viewProduct' , component : ViewProductComponent},
   // {path:'Shop' , component : ShopComponent},
   {path:'home' , component : HomeComponent},
+  {path:'about' , component : AboutComponent},
   {path:'login' , component : AuthComponent},
   {path:'signup' , component : SignupComponent},
   {path:'cart' , component : CartComponent},
+  {path:'product-details' , component : ProductDetailsComponent},
   {path:'payment' , component : PaymentComponent},
   {path:'allorders' , component : AllOrdersComponent},
   { path: '', component: HomeComponent }

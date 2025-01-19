@@ -1,20 +1,41 @@
+.parent {
+  background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../../assets/img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
+  background-position: center; /* محاذاة الصورة في المنتصف */
+}
+
+
+
+
+
+
+
 /* الحاوية الكاملة للمحتوى */
 .user-orders-wrapper {
   position: relative;
   max-width: 800px;
   margin: auto;
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding-bottom: 60px; /* لضمان وجود مساحة أسفل المحتوى للزر */
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding-bottom: 60px;
+  /* لضمان وجود مساحة أسفل المحتوى للزر */
+  border: 1px solid greenyellow;
+
 }
 
 /* الحاوية التي تحتوي على البيانات القابلة للتمرير */
 .user-orders-container {
   padding: 20px;
-  max-height: 700px; /* الحد الأقصى للارتفاع */
-  overflow-y: scroll; /* تمكين التمرير العمودي */
+  max-height: 600px;
+  /* الحد الأقصى للارتفاع */
+  overflow-y: scroll;
+  /* تمكين التمرير العمودي */
 }
 
 
@@ -31,7 +52,7 @@
   cursor: pointer;
   margin-top: 20px;
   text-align: center;
-  
+
 }
 
 .home-btn:hover {
@@ -70,13 +91,22 @@
 }
 
 .order-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom:1px solid #4caf50;
+  transition: background-color 0.5s ease;
+
 }
+
+.order-card:hover{
+  background-color: #d9ffd2; /* تأثير hover بلون أفتح */
+}
+
+
 
 .order-header {
   display: flex;
@@ -171,8 +201,10 @@
   width: 80%;
   max-width: 600px;
   position: relative;
-  max-height: 80vh; /* تحديد الطول الأقصى */
-  overflow-y: auto; /* تمكين التمرير عموديًا */
+  max-height: 80vh;
+  /* تحديد الطول الأقصى */
+  overflow-y: auto;
+  /* تمكين التمرير عموديًا */
 }
 
 /* باقي النمط كما هو */
@@ -185,8 +217,10 @@
 }
 
 .products-list {
-  max-height: 300px; /* تحديد أقصى ارتفاع لقائمة المنتجات */
-  overflow-y: auto;  /* تمكين التمرير إذا زادت العناصر */
+  max-height: 300px;
+  /* تحديد أقصى ارتفاع لقائمة المنتجات */
+  overflow-y: auto;
+  /* تمكين التمرير إذا زادت العناصر */
 }
 
 
@@ -196,7 +230,7 @@
 
 
 
-.page-title{
+.page-title {
   color: #4caf50;
 }
 
@@ -225,9 +259,12 @@
   width: 80%;
   max-width: 600px;
   position: relative;
-  max-height: 80vh; /* تحديد الطول الأقصى */
-  overflow-y: auto; /* تمكين التمرير عموديًا */
-  padding-right: 10px; /* لتفادي تصادم التمرير مع النص */
+  max-height: 80vh;
+  /* تحديد الطول الأقصى */
+  overflow-y: auto;
+  /* تمكين التمرير عموديًا */
+  padding-right: 10px;
+  /* لتفادي تصادم التمرير مع النص */
 }
 
 /* باقي النمط كما هو */
@@ -240,12 +277,34 @@
 }
 
 .products-list {
-  max-height: 300px; /* تحديد أقصى ارتفاع لقائمة المنتجات */
-  overflow-y: auto;  /* تمكين التمرير إذا زادت العناصر */
-  padding-right: 10px; /* لتفادي تصادم التمرير مع النص */
+  max-height: 300px;
+  /* تحديد أقصى ارتفاع لقائمة المنتجات */
+  overflow-y: auto;
+  /* تمكين التمرير إذا زادت العناصر */
+  padding-right: 10px;
+  /* لتفادي تصادم التمرير مع النص */
 }
 
 
 .products-list::-webkit-scrollbar {
   width: 0px;
+}
+
+
+@media (max-width : 765px) {
+  .user-orders-wrapper {
+    max-width: 95%;
+
+  }
+}
+
+
+
+@media (max-width:480px) {
+  .user-orders-container {
+    max-height: 550px;
+    /* الحد الأقصى للارتفاع */
+    /* تمكين التمرير العمودي */
+  }
+  
 }

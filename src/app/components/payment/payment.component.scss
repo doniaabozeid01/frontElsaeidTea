@@ -1,73 +1,197 @@
-/* إعدادات النموذج */
-
-.checkout-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    color: #333;
+.parent {
+  background-color: #ffffff;
+  /* اللون الأبيض ليتماشى مع صفحة All Orders */
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../../assets/img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* جعل الصورة تغطي العنصر بالكامل */
+  background-position: center;
+  /* محاذاة الصورة في المنتصف */
 }
 
 
+
+/* إعدادات النموذج */
+
+.checkout-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #4caf50;
+}
+
 form {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #e4f1e2;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin:  auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* لضمان وجود مساحة أسفل المحتوى للزر */
+  border: 1px solid greenyellow;
+}
+
+/* إعدادات المجموعات */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* إعدادات العناوين */
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* إعدادات الحقول */
+input.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* إعدادات التحقق من الأخطاء */
+.text-danger {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* إعدادات الزر */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #388e3c;
+  /* اللون الأخضر */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2e7d32;
+}
+
+button[type="submit"]:disabled {
+  background-color: #c8e6c9;
+  cursor: not-allowed;
+}
+
+
+
+@media (max-width:765px) {
+
+  form {
+    max-width: 95%;
   }
-  
-  /* إعدادات المجموعات */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* إعدادات العناوين */
-  label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  /* إعدادات الحقول */
-  input.form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  /* إعدادات التحقق من الأخطاء */
-  .text-danger {
-    color: #d9534f;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  /* إعدادات الزر */
-  button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background-color: #388e3c; /* اللون الأخضر */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #2e7d32;
-  }
-  
-  button[type="submit"]:disabled {
-    background-color: #c8e6c9;
-    cursor: not-allowed;
-  }
-  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .parent {
+//   background-color: #ffffff;
+//   height: 100vh;
+//   width: 100%;
+//   background-image: url('../../../assets/img.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// form {
+//   max-width: 600px;
+//   width: 90%;
+//   padding: 30px;
+//   background-color: rgba(255, 255, 255, 0.8);
+//   border-radius: 15px;
+//   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+//   border: 2px solid #4caf50;
+// }
+
+// .checkout-title {
+//   text-align: center;
+//   font-size: 26px;
+//   font-weight: bold;
+//   color: #388e3c;
+//   margin-bottom: 20px;
+// }
+
+// label {
+//   font-size: 15px;
+//   font-weight: bold;
+//   margin-bottom: 8px;
+//   color: #555;
+// }
+
+// input.form-control {
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   transition: border-color 0.3s ease;
+// }
+
+// input.form-control:focus {
+//   border-color: #4caf50;
+//   outline: none;
+//   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+// }
+
+// button[type="submit"] {
+//   width: 100%;
+//   padding: 12px;
+//   font-size: 18px;
+//   color: #fff;
+//   background-color: #4caf50;
+//   border: none;
+//   border-radius: 10px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+// }
+
+// button[type="submit"]:hover {
+//   background-color: #388e3c;
+// }
+
+// button[type="submit"]:disabled {
+//   background-color: #c8e6c9;
+//   cursor: not-allowed;
+// }
+
+// @media (max-width: 768px) {
+//   form {
+//     padding: 20px;
+//   }
+// }
+
+// .form-group {
+//   margin-bottom: 20px;
+// }

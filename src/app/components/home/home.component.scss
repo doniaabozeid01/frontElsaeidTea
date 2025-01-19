@@ -30,19 +30,19 @@ h1 {
     margin-bottom: 20px;
 }
 
-button {
-    font-size: 1.5rem;
-    padding: 0.7vw 1.5vw;
-    /* يعتمد على عرض الشاشة */
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    background-color: #6db741;
-    color: white;
-}
+// button {
+//     font-size: 1.5rem;
+//     padding: 0.7vw 1.5vw;
+//     /* يعتمد على عرض الشاشة */
+//     border-radius: 8px;
+//     transition: background-color 0.3s ease;
+//     background-color: #6db741;
+//     color: white;
+// }
 
-button:hover {
-    background-color: #014912;
-}
+// button:hover {
+//     background-color: #014912;
+// }
 
 .bold {
     font-weight: bold;
@@ -169,13 +169,15 @@ nav {
 
 
 
-
-// .active-link{
+// .active-link {
 //     padding: 8px;
-//     // background-color: #014912;
-//     background-color: #6db741;
-//     border-radius: 8px; /* إضافة خط أسفل الرابط */
+//     border-bottom: 3px solid #6db741;  /* إضافة خط تحت باللون الذي تريده */
+//     width: 100%;
+//     text-align: center;  /* لتوسيط النص داخل الرابط */
 // }
+
+
+
 
 
 // .active-link {
@@ -191,7 +193,8 @@ nav {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* أسفل الأيقونة */
+    top: 100%;
+    /* أسفل الأيقونة */
     left: -50%;
     // right:0; /* محاذاة لليمين */
     // min-width: 100px;
@@ -202,11 +205,13 @@ nav {
 
 .dropdown-menu a {
     text-decoration: none;
-    color: inherit; /* لتحافظ على لون النص الحالي */
+    color: inherit;
+    /* لتحافظ على لون النص الحالي */
 }
 
 .dropdown-menu a:hover {
-    text-decoration: underline; /* إذا أردت خطًا عند التحويم */
+    text-decoration: underline;
+    /* إذا أردت خطًا عند التحويم */
 }
 
 
@@ -217,13 +222,741 @@ nav {
 
 
 .dropdown-item {
-    color: inherit; /* استخدام اللون الحالي للنص */
-    text-decoration: none; /* إزالة الخط السفلي */
+    color: inherit;
+    /* استخدام اللون الحالي للنص */
+    text-decoration: none;
+    /* إزالة الخط السفلي */
 }
 
-.dropdown-item:focus, 
+.dropdown-item:focus,
 .dropdown-item:active {
-    color: inherit; /* إزالة اللون الأزرق */
-    background-color: #15ce40; /* منع تغيير الخلفية */
-    outline: none; /* إزالة الإطار */
+    color: inherit;
+    /* إزالة اللون الأزرق */
+    background-color: #15ce40;
+    /* منع تغيير الخلفية */
+    outline: none;
+    /* إزالة الإطار */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-page {
+    font-family: Arial, sans-serif;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.col-md-6 {
+    height: 550px;
+    min-height: 300px;
+}
+
+.col-md-12 {
+    height: 270px;
+    max-height: 270px;
+}
+
+.greenBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+.greenBtn:hover {
+    background-color: #218838;
+}
+
+
+.coverIcon {
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 65, 0);
+    cursor: pointer;
+    // transition: background 3s ease-in;
+}
+
+
+.coverIcon:hover {
+    background: linear-gradient(to right, rgb(119, 253, 119), rgb(0, 95, 40));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vlog {
+    background-color: white;
+    padding: 20px;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* يجعل الفيديو يملأ الشاشة */
+    z-index: 1;
+    /* لضمان أن الفيديو في الخلفية */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* خلفية سوداء شفافة */
+    z-index: 2;
+}
+
+
+
+//   .vlog-title {
+//     font-size: 4rem; /* حجم كبير للغاية */
+//     font-family: 'Arial', sans-serif; /* خط بسيط وواضح */
+//     font-weight: 700;
+//     color: #fff;
+//     text-align: center;
+//     text-transform: uppercase;
+//     letter-spacing: 6px;
+//     margin-bottom: 40px;
+//     position: relative;
+//     z-index: 2;
+// }
+
+// .vlog-title::after {
+//     content: "";
+//     position: absolute;
+//     width: 120%;
+//     height: 4px;
+//     background: linear-gradient(to right, #4CAF50, #81C784); /* تدرج لوني مميز */
+//     left: -10%;
+//     bottom: -15px;
+//     z-index: -1;
+//     animation: glowing 1.5s infinite alternate; /* تأثير التوهج */
+// }
+
+// .vlog-title::before {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 5px;
+//     background-color: rgba(255, 255, 255, 0.6); /* تأثير خط خفيف أسفل النص */
+//     bottom: -10px;
+//     left: 0;
+//     z-index: -1;
+// }
+
+// @keyframes glowing {
+//     0% {
+//         transform: scaleX(1);
+//         opacity: 0.7;
+//     }
+//     100% {
+//         transform: scaleX(1.2);
+//         opacity: 1;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .background-video {
+        object-fit: contain;
+        /* يحافظ على عرض الفيديو بالكامل مع تقليل الحجم */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .comments-slider {
+//     max-width: 800px;
+//     margin: 0 auto;
+//     padding: 20px;
+//     background-color: #f9f9f9;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     overflow: hidden;
+// }
+
+// .comments-slider h3 {
+//     text-align: center;
+//     font-size: 2rem;
+//     margin-bottom: 20px;
+//     color: #333;
+// }
+
+// .comment-slider-container {
+//     display: flex;
+//     transition: transform 0.5s ease-in-out;
+// }
+
+// .comment {
+//     background-color: #fff;
+//     margin-right: 20px;
+//     padding: 15px;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     display: flex;
+//     flex-direction: column;
+//     min-width: 300px;
+// }
+
+// .comment.highlight {
+//     animation: fadeInWithConfetti 1s forwards;
+// }
+
+// .comment-header {
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 10px;
+// }
+
+// .user-avatar {
+//     width: 40px;
+//     height: 40px;
+//     background-color: #4CAF50;
+//     border-radius: 50%;
+//     margin-right: 10px;
+// }
+
+// .user-info {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .user-name {
+//     font-size: 1.1rem;
+//     font-weight: bold;
+//     color: #333;
+// }
+
+// .comment-date {
+//     font-size: 0.9rem;
+//     color: #999;
+// }
+
+// .comment-text {
+//     font-size: 1rem;
+//     color: #333;
+//     line-height: 1.5;
+// }
+
+// .slider-buttons {
+//     text-align: center;
+//     margin-top: 20px;
+// }
+
+// .prev-btn, .next-btn {
+//     // padding: 10px 20px;
+//     // font-size: 1.2rem;
+//     // background-color: #4CAF50;
+//     color: white;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+// }
+
+// @keyframes fadeInWithConfetti {
+//     0% {
+//         opacity: 0;
+//         transform: translateY(20px);
+//     }
+//     50% {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translateY(0);
+//         animation: confetti 1s ease-in-out infinite;
+//     }
+// }
+
+// @keyframes confetti {
+//     0% {
+//         transform: translateY(-30px) rotate(0deg);
+//         opacity: 0;
+//     }
+//     100% {
+//         transform: translateY(30px) rotate(180deg);
+//         opacity: 1;
+//     }
+// }
+
+
+
+
+
+
+
+
+/* تغيير السهم السابق إلى اللون الأخضر */
+/* تغيير السهم السابق إلى اللون الأخضر #28a745 */
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%2328a745"%3e%3cpath d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/%3e%3c/svg%3e');
+}
+
+/* تغيير السهم التالي إلى اللون الأخضر #28a745 */
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%2328a745"%3e%3cpath d="M4.646 1.646a.5.5 0 0 1 0 .708L10.293 8 4.646 13.646a.5.5 0 0 1 .708.708l6-6a.5.5 0 0 1 0-.708l-6-6a.5.5 0 0 1-.708 0z"/%3e%3c/svg%3e');
+}
+
+
+.carousel {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+
+
+
+    .carousel {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-homePage {
+    background-image: url('../../../assets/c2741a1e-08de-4888-8a00-febbb8bd3324.jpg');
+    height: 100vh;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    background-color: #044223;
+    /* لون خلفية الفوتر */
+    color: white;
+    padding: 40px 20px;
+    /* المسافات داخل الفوتر */
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.footer .details {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ddd;
+    padding: 0 30px;
+    text-align: justify;
+}
+
+.footer .contact-info {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+}
+
+.footer .contact-info span {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media (max-width: 768px) {
+//     .nav-item.d-flex {
+//         display: flex;
+//         align-items: center; /* لضبط الأيقونات عموديًا في المنتصف */
+//         justify-content: space-between; /* لضبط الأيقونات أفقيًا */
+//     }
+
+//     .nav-item.d-flex .nav-link {
+//     }
+// }
