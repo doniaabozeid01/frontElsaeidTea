@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Splide from '@splidejs/splide';
+// import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
 
 
   constructor(private _Router: Router) {
@@ -35,29 +38,6 @@ export class HomeComponent {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   product = {
     name: 'شاي الصعيد الفاخر',
     description: 'استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب. هذا الشاي مصنوع من أجود الأوراق الطبيعية.',
@@ -69,15 +49,15 @@ export class HomeComponent {
     console.log('Product added to cart');
   }
 
-  count: number = 1;
+  // count: number = 1;
 
-  add() {
-    ++this.count;
-  }
-  minus() {
-    if (this.count >= 2)
-      --this.count;
-  }
+  // add() {
+  //   ++this.count;
+  // }
+  // minus() {
+  //   if (this.count >= 2)
+  //     --this.count;
+  // }
 
 
 
@@ -129,5 +109,75 @@ export class HomeComponent {
 
 
 
+
+
+
+
+
+
+  ngAfterViewInit(): void {
+    const splide = new Splide('#image-carousel', {
+      type: 'loop',
+      perPage: 1,
+      autoplay: true,
+      interval: 3000,
+      arrows: false,
+      pagination: true,
+      speed: 1000,
+    });
+  
+    splide.mount();
+  
+    // تأكد من تحديث Splide بعد تحميل الصور
+    splide.refresh();
+  }
+  
+
+
+  ngOnInit(): void {
+    new Splide('#image-carousel', {
+      type: 'slide',
+      perPage: 1,
+      autoplay: true,
+      interval: 3000,
+      arrows: false,
+      pagination: true,
+      speed: 1000,
+      heightRatio: 0.5,  // لضبط الارتفاع بناءً على العرض
+    }).mount();
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
 
 }

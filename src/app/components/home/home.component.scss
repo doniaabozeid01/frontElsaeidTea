@@ -30,19 +30,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-// button {
-//     font-size: 1.5rem;
-//     padding: 0.7vw 1.5vw;
-//     /* يعتمد على عرض الشاشة */
-//     border-radius: 8px;
-//     transition: background-color 0.3s ease;
-//     background-color: #6db741;
-//     color: white;
-// }
 
-// button:hover {
-//     background-color: #014912;
-// }
 
 .bold {
     font-weight: bold;
@@ -50,7 +38,8 @@ h1 {
 }
 
 .home {
-    background-image: url(../../../assets/10-01.png);
+    // background-image: url(../../../assets/10-01.png);
+    // background-image: url(../../../assets/10-01.png);
     background-position: center;
     /* لضمان تمركز الصورة */
     background-size: cover;
@@ -163,29 +152,6 @@ nav {
 
 
 
-
-
-
-
-
-
-// .active-link {
-//     padding: 8px;
-//     border-bottom: 3px solid #6db741;  /* إضافة خط تحت باللون الذي تريده */
-//     width: 100%;
-//     text-align: center;  /* لتوسيط النص داخل الرابط */
-// }
-
-
-
-
-
-// .active-link {
-//     border-bottom: 2px solid #6db741;
-// }
-
-
-
 .nav-item {
     position: relative;
 }
@@ -254,36 +220,19 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.splide__slide img {
+    width: 100%; /* تضمن أن الصور تمتد لملء الكاروسيل */
+    height: auto; /* للحفاظ على النسب */
+    object-fit: cover; /* تقطع أو تمدد الصورة بشكل أنيق */
+  }
+  
+  
 
 
 
 .product-page {
-    font-family: Arial, sans-serif;
-    max-width: 1300px;
+    // font-family: Arial, sans-serif;
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -291,15 +240,15 @@ nav {
     background-color: white;
 }
 
-.col-md-6 {
-    height: 550px;
-    min-height: 300px;
-}
+// .col-md-6 {
+//     height: 550px;
+//     min-height: 300px;
+// }
 
-.col-md-12 {
-    height: 270px;
-    max-height: 270px;
-}
+// .col-md-12 {
+//     height: 270px;
+//     max-height: 270px;
+// }
 
 .greenBtn {
     padding: 10px 20px;
@@ -316,25 +265,22 @@ nav {
 }
 
 
-.coverIcon {
-    width: 2.3em;
-    height: 2.3em;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(0, 65, 0);
-    cursor: pointer;
-    // transition: background 3s ease-in;
-}
+// .coverIcon {
+//     width: 2.3em;
+//     height: 2.3em;
+//     border-radius: 8px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border: 1px solid rgb(0, 65, 0);
+//     cursor: pointer;
+//     // transition: background 3s ease-in;
+// }
 
 
-.coverIcon:hover {
-    background: linear-gradient(to right, rgb(119, 253, 119), rgb(0, 95, 40));
-}
-
-
-
+// .coverIcon:hover {
+//     background: linear-gradient(to right, rgb(119, 253, 119), rgb(0, 95, 40));
+// }
 
 
 
@@ -346,6 +292,20 @@ nav {
 
 
 
+
+
+// .image-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+//     gap: 20px;
+//     /* المسافة بين الأعمدة */
+//     row-gap: 20px;
+//     /* المسافة بين الصفوف */
+// }
 
 
 
@@ -356,7 +316,7 @@ nav {
 
 .vlog {
     background-color: white;
-    padding: 20px;
+    // padding: 20px;
 }
 
 
@@ -396,53 +356,6 @@ nav {
 
 
 
-//   .vlog-title {
-//     font-size: 4rem; /* حجم كبير للغاية */
-//     font-family: 'Arial', sans-serif; /* خط بسيط وواضح */
-//     font-weight: 700;
-//     color: #fff;
-//     text-align: center;
-//     text-transform: uppercase;
-//     letter-spacing: 6px;
-//     margin-bottom: 40px;
-//     position: relative;
-//     z-index: 2;
-// }
-
-// .vlog-title::after {
-//     content: "";
-//     position: absolute;
-//     width: 120%;
-//     height: 4px;
-//     background: linear-gradient(to right, #4CAF50, #81C784); /* تدرج لوني مميز */
-//     left: -10%;
-//     bottom: -15px;
-//     z-index: -1;
-//     animation: glowing 1.5s infinite alternate; /* تأثير التوهج */
-// }
-
-// .vlog-title::before {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 5px;
-//     background-color: rgba(255, 255, 255, 0.6); /* تأثير خط خفيف أسفل النص */
-//     bottom: -10px;
-//     left: 0;
-//     z-index: -1;
-// }
-
-// @keyframes glowing {
-//     0% {
-//         transform: scaleX(1);
-//         opacity: 0.7;
-//     }
-//     100% {
-//         transform: scaleX(1.2);
-//         opacity: 1;
-//     }
-// }
-
 
 
 
@@ -459,216 +372,6 @@ nav {
         /* يحافظ على عرض الفيديو بالكامل مع تقليل الحجم */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .comments-slider {
-//     max-width: 800px;
-//     margin: 0 auto;
-//     padding: 20px;
-//     background-color: #f9f9f9;
-//     border-radius: 10px;
-//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//     overflow: hidden;
-// }
-
-// .comments-slider h3 {
-//     text-align: center;
-//     font-size: 2rem;
-//     margin-bottom: 20px;
-//     color: #333;
-// }
-
-// .comment-slider-container {
-//     display: flex;
-//     transition: transform 0.5s ease-in-out;
-// }
-
-// .comment {
-//     background-color: #fff;
-//     margin-right: 20px;
-//     padding: 15px;
-//     border-radius: 8px;
-//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//     display: flex;
-//     flex-direction: column;
-//     min-width: 300px;
-// }
-
-// .comment.highlight {
-//     animation: fadeInWithConfetti 1s forwards;
-// }
-
-// .comment-header {
-//     display: flex;
-//     align-items: center;
-//     margin-bottom: 10px;
-// }
-
-// .user-avatar {
-//     width: 40px;
-//     height: 40px;
-//     background-color: #4CAF50;
-//     border-radius: 50%;
-//     margin-right: 10px;
-// }
-
-// .user-info {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .user-name {
-//     font-size: 1.1rem;
-//     font-weight: bold;
-//     color: #333;
-// }
-
-// .comment-date {
-//     font-size: 0.9rem;
-//     color: #999;
-// }
-
-// .comment-text {
-//     font-size: 1rem;
-//     color: #333;
-//     line-height: 1.5;
-// }
-
-// .slider-buttons {
-//     text-align: center;
-//     margin-top: 20px;
-// }
-
-// .prev-btn, .next-btn {
-//     // padding: 10px 20px;
-//     // font-size: 1.2rem;
-//     // background-color: #4CAF50;
-//     color: white;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-// }
-
-// @keyframes fadeInWithConfetti {
-//     0% {
-//         opacity: 0;
-//         transform: translateY(20px);
-//     }
-//     50% {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-//     100% {
-//         opacity: 1;
-//         transform: translateY(0);
-//         animation: confetti 1s ease-in-out infinite;
-//     }
-// }
-
-// @keyframes confetti {
-//     0% {
-//         transform: translateY(-30px) rotate(0deg);
-//         opacity: 0;
-//     }
-//     100% {
-//         transform: translateY(30px) rotate(180deg);
-//         opacity: 1;
-//     }
-// }
-
-
-
 
 
 
@@ -747,6 +450,7 @@ nav {
 
 .container-homePage {
     background-image: url('../../../assets/c2741a1e-08de-4888-8a00-febbb8bd3324.jpg');
+    // background-image: url('../../../assets/77-01.png');
     height: 100vh;
     overflow: auto;
 }
@@ -759,6 +463,38 @@ nav {
 
 
 
+// .splide__slide img {
+//     visibility: visible !important;
+//     opacity: 1 !important;
+//   }
+//   .splide__slide img {
+//     width: 100%;
+//     height: auto;
+//   }
+    
+
+  .splide__slide img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover; /* هذا يضمن أن الصورة ستملأ العنصر دون تشويه */
+  }
+
+  .splide__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* لضمان وجود مسافة بين الصور */
+  }
+
+  .splide__slide img {
+    object-fit: cover; /* يملأ الصورة الحجم المحدد بدون تشويه */
+    object-position: center; /* يحدد المكان الذي ستظهر فيه الصورة */
+    margin: auto;
+  }
+  .splide__track {
+    // height: 550px; /* يمكنك تغيير الارتفاع حسب احتياجاتك */
+    overflow: hidden; /* هذا يضمن أن الصور لا تتجاوز الحواف */
+  }
+          
 
 
 
@@ -768,10 +504,17 @@ nav {
 
 
 
-
-
-
-
+@media (max-width:768px) {
+    .splide__slide img {
+        width: 98%;
+        height: 100%;
+        object-fit: cover; /* هذا يضمن أن الصورة ستملأ العنصر دون تشويه */
+      }
+    
+      .splide__list {
+        gap: 2px; /* لضمان وجود مسافة بين الصور */
+      }
+}
 
 
 
@@ -838,10 +581,15 @@ nav {
     width: 100%;
     background-color: #044223;
     /* لون خلفية الفوتر */
-    color: white;
+    color: rgb(224, 226, 219);
+    // color: rgb(223, 223, 223);
     padding: 40px 20px;
     /* المسافات داخل الفوتر */
     text-align: center;
+    background-image: url('../../../assets/jaikishan-patel-UmKPjLUyUXU-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .footer h2 {
@@ -877,86 +625,3 @@ nav {
 .footer .contact-info span {
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @media (max-width: 768px) {
-//     .nav-item.d-flex {
-//         display: flex;
-//         align-items: center; /* لضبط الأيقونات عموديًا في المنتصف */
-//         justify-content: space-between; /* لضبط الأيقونات أفقيًا */
-//     }
-
-//     .nav-item.d-flex .nav-link {
-//     }
-// }

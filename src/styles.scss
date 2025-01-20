@@ -1,19 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+/* استيراد الخطوط من Google Fonts باستخدام @import */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Roboto:wght@400;500&display=swap');
 
 body {
-    direction: rtl; /* لجعل النصوص والاتجاه من اليمين لليسار */
-    text-align: right; /* محاذاة النصوص إلى اليمين */
-    font-family: 'Tajawal', Arial, sans-serif; /* خط مناسب للغة العربية */
-  }
+    direction: rtl;
+    /* لجعل النصوص والاتجاه من اليمين لليسار */
+    text-align: right;
+    /* محاذاة النصوص إلى اليمين */
+    font-family: 'Tajawal', Arial, sans-serif;
+    /* خط مناسب للغة العربية */
+}
 
-  
 
 
 
-li{
+
+li {
     cursor: pointer;
 }
 
-i{
+i {
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* استخدم الخطوط في الموقع */
+body {
+    font-family: 'Cairo', sans-serif!important;
+}
+
+h4,
+h5 {
+    font-family: 'Cairo', sans-serif!important;
+}
+
+/* تخصيص الخط للعناوين */
+h1,
+h2,
+h3, button {
+    font-family: 'Cairo', sans-serif!important;
+    font-weight: 600;
+}
+
+/* تخصيص النص العادي */
+p,
+span,
+li,
+a {
+    font-family: 'Cairo', sans-serif!important;
 }

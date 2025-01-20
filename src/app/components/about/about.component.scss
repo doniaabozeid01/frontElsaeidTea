@@ -1,150 +1,3 @@
-.about-section {
-    background-color: #f4f4f4;
-    padding: 60px 0;
-    font-family: 'Arial', sans-serif;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-}
-
-.section-description {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-}
-
-.about-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.about-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.about-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.about-card h3 {
-    font-size: 1.4rem;
-    color: #2c3e50;
-    margin-top: 20px;
-    font-weight: 500;
-}
-
-.about-card p {
-    font-size: 1rem;
-    color: #7f8c8d;
-    margin-top: 15px;
-    line-height: 1.5;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nav-link:hover {
     color: rgb(207, 207, 207) !important;
     // color: rgb(206, 17, 17) !important;
@@ -162,91 +15,6 @@ nav {
     width: 70px;
     height: 70px;
 
-}
-
-/* للشاشات الصغيرة جدًا (الموبايلات) */
-// @media (max-width: 576px) {
-//     h1 {
-//         font-size: 1rem;
-//         /* تقليل حجم الخط */
-//     }
-
-//     .content {
-//         padding: 10px;
-//         /* تقليل المسافة الداخلية */
-//         max-width: 90%;
-//         left: 50%;
-
-//     }
-
-//     button {
-//         font-size: 1.2rem;
-//         /* تصغير حجم الأزرار */
-//         // padding: 10px 20px;
-//     }
-// }
-
-/* للشاشات المتوسطة (تابلت) */
-// @media (max-width: 768px) {
-//     h1 {
-//         font-size: 2rem;
-//     }
-
-//     .content {
-//         padding: 8px;
-//         width: 50%;
-//         left: 50%;
-//     }
-
-//     button {
-//         font-size: 1.2rem;
-//         // padding: 12px 22px;
-//     }
-// }
-
-/* للشاشات الكبيرة (ديسكتوب) */
-@media (min-width: 769px) {
-    h1 {
-        font-size: 3rem;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .setPadding {
-        padding: 0px 70px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .active-link{
-//     padding: 8px;
-//     // background-color: #014912;
-//     background-color: #6db741;
-//     border-radius: 8px; /* إضافة خط أسفل الرابط */
-// }
-
-
-
-
-.active-link {
-    padding: 8px;
-    border-bottom: 3px solid #6db741;  /* إضافة خط تحت باللون الذي تريده */
-    width: 100%;
-    text-align: center;  /* لتوسيط النص داخل الرابط */
 }
 
 
@@ -304,6 +72,96 @@ nav {
 
 
 
+/* للشاشات الكبيرة (ديسكتوب) */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .setPadding {
+        padding: 0px 70px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// .parent {
+//     background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
+//     height: 100vh;
+//     width: 100%;
+//     background-image: url('../../../assets/img.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
+//     background-position: center; /* محاذاة الصورة في المنتصف */
+// }
+
+
+// .about-section {
+//     // background-color: #f4f4f4;
+//     padding: 60px 0;
+//     font-family: 'Arial', sans-serif;
+// }
+
+// .section-title {
+//     font-size: 2.5rem;
+//     color: #333;
+//     font-weight: 600;
+//     letter-spacing: 1px;
+//     margin-bottom: 30px;
+// }
+
+// .section-description {
+//     font-size: 1.1rem;
+//     color: #555;
+//     max-width: 800px;
+//     margin: 0 auto 40px auto;
+//     line-height: 1.6;
+// }
+
+// .about-card {
+//     background-color: #fff;
+//     padding: 20px;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     text-align: center;
+//     transition: all 0.3s ease;
+// }
+
+// .about-card:hover {
+//     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+// }
+
+// .about-card img {
+//     max-width: 100%;
+//     height: auto;
+//     border-radius: 10px;
+// }
+
+// .about-card h3 {
+//     font-size: 1.4rem;
+//     color: #2c3e50;
+//     margin-top: 20px;
+//     font-weight: 500;
+// }
+
+// .about-card p {
+//     font-size: 1rem;
+//     color: #7f8c8d;
+//     margin-top: 15px;
+//     line-height: 1.5;
+// }
 
 
 
@@ -327,10 +185,90 @@ nav {
 
 
 
+.parent {
+    background-color: #f9f5e3; /* لون خلفية فاتح ليظهر العناصر بشكل واضح */
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../../assets/img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
+    background-position: center; /* محاذاة الصورة في المنتصف */
+    padding: 0;
+}
 
+.about-section {
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.85); /* خلفية شفافة قليلاً لإبراز النص */
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
+.section-title {
+    font-size: 2.8rem;
+    color: #6b8e23; /* لون أخضر زيتوني مستوحى من الخلفية */
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
 
+.section-description {
+    font-size: 1.2rem;
+    color: #556b2f; /* لون أخضر غامق */
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
 
+.about-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #dcdcdc; /* حدود خفيفة لإبراز الكروت */
+}
 
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
 
+.about-card img {
+    max-width: 100%;
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
+.about-card h3 {
+    font-size: 1.6rem;
+    color: #2e8b57; /* لون أخضر متوسط */
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #6b8e23; /* نفس لون العناوين ولكن بدرجة أخف */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-card {
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+}
