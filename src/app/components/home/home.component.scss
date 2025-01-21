@@ -625,3 +625,76 @@ nav {
 .footer .contact-info span {
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تحسين حجم الصورة بحيث لا تفرش */
+.logo-img {
+    max-width: 200px; /* تغيير الحجم حسب الحاجة */
+    height: auto;
+}
+
+
+
+// /* محاذاة زر الـ toggle في اليسار */
+// .navbar-toggler {
+//     margin-left: auto;
+// }
+
+li.nav-item::marker {
+    content: none;
+}
