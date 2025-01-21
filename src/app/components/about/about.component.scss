@@ -194,6 +194,7 @@ nav {
     background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
     background-position: center; /* محاذاة الصورة في المنتصف */
     padding: 0;
+    overflow: auto;
 }
 
 .about-section {
@@ -271,4 +272,10 @@ nav {
     .section-description {
         font-size: 1rem;
     }
+
+    .about-section {
+
+        max-width: 95%;
+    }
+    
 }

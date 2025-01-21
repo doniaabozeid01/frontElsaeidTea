@@ -11,15 +11,16 @@
 
 .product-info {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .product-image {
     width: 200px;  /* لتحديد عرض الصورة */
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    // border: 1px solid red;
 }
 
 .product-title {
@@ -32,7 +33,7 @@
 .product-description {
     font-size: 16px;
     color: #777;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .product-about {
@@ -73,7 +74,7 @@
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    height: 120px;
+    height: 70px;
     margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -111,6 +112,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: auto;
 }
 
 
@@ -174,3 +176,8 @@
 
 
 
+@media (max-width:768px) {
+    .product-details{
+        max-width: 95%;
+    }
+}
