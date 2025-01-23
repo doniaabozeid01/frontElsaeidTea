@@ -6,15 +6,15 @@
         <div class="cart-items">
             <!-- عنصر من السلة -->
             <div class="cart-item" *ngFor="let item of cartItems">
-                <img src="{{ item.image }}" alt="صورة المنتج" class="cart-item-image ms-3 me-0 p-0">
+                <img src="../../../assets/c.jpg" alt="صورة المنتج" class="cart-item-image ms-3 me-0 p-0">
                 <div class="cart-item-details">
-                    <p class="cart-item-name">{{ item.name }}</p>
-                    <p class="cart-item-quantity">جرام {{ item.weight }}</p>
-                    <p class="cart-item-price">د.ك {{ item.price }}</p>
+                    <p class="cart-item-name">شاي الصعيد</p>
+                    <p class="cart-item-quantity">جرام {{ item.productDetails.weight }}</p>
+                    <p class="cart-item-price">د.ك {{ item.productDetails.price }}</p>
                 </div>
                 <div class="cart-item-actions">
                     <input type="number" [(ngModel)]="item.quantity" class="item-quantity">
-                    <button class="btn remove-item" (click)="removeItem(item)">إزالة</button>
+                    <button class="btn remove-item" (click)="removeItem(item.id)">إزالة</button>
                 </div>
             </div>
         </div>

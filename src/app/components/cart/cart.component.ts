@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CallApisService } from 'src/app/services/call-apis.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,40 +8,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
-  cartItems = [
-    {
-      name: 'شاي الصعيد',
-      price: 3.000,
-      weight: 250,
-      quantity: 1,
-      image: '../../../assets/1-01.png'
-    },{
-      name: 'شاي الصعيد',
-      price: 3.000,
-      weight: 250,
-      quantity: 1,
-      image: '../../../assets/1-01.png'
-    },{
-      name: 'شاي الصعيد',
-      price: 3.000,
-      weight: 250,
-      quantity: 1,
-      image: '../../../assets/1-01.png'
-    },{
-      name: 'شاي الصعيد',
-      price: 3.000,
-      weight: 250,
-      quantity: 1,
-      image: '../../../assets/1-01.png'
-    }
-  ];
-  
+
+  constructor(private router: Router, private callApi: CallApisService) { }
+
+  cartItems: any;
+
   getTotalPrice(): number {
-    return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return 2;
+    // return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   }
-  
+
   removeItem(itemToRemove: any): void {
-    this.cartItems = this.cartItems.filter(item => item !== itemToRemove);
+
+    // this.cartItems = this.cartItems.filter(item => item !== itemToRemove);
   }
-  
+
+  ngOnInit(): void {
+    this.callApi.getAllCartItems().subscribe({
+      next: (response) => {
+        console.log(response);
+        this.cartItems = response;
+      }
+    })
+  }
+
+
+  // GetProductName(id: number): string {
+  //   this.callApi.GetProductById(id).subscribe({
+  //     next: (response) => {
+  //       console.log(response);
+  //       return response.name;
+  //     },
+  //     error: (err) => {
+  //       return '';
+  //     }
+  //   })
+  //   return '';
+
+  // }
+
 }

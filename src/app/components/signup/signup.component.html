@@ -1,4 +1,4 @@
-<div class="w-100 d-flex justify-content-center align-items-center auth ">
+<!-- <div class="w-100 d-flex justify-content-center align-items-center auth ">
     <div class="login-container  p-5 ">
         <div class="rounder cover m-auto mb-4 mt-0 pt-0">
             <img src="../../../assets/logo.png" class="w-100 h-100 " alt="">
@@ -38,6 +38,95 @@
                 <button type="submit" class="btn btn-success" [disabled]="signupForm.invalid">Sign Up</button>
             </div>
 
+        </form>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w-100 d-flex justify-content-center align-items-center auth">
+    <div class="login-container p-5">
+        <div class="rounder cover m-auto mb-4 mt-0 pt-0">
+            <img src="../../../assets/logo.png" class="w-100 h-100" alt="">
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="">
+            <!-- Error message from API -->
+            <div *ngIf="apiErrorMessage" class="alert alert-danger">
+                {{ apiErrorMessage }}
+            </div>
+
+            <!-- fullname Field -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input id="fullname" type="text" formControlName="fullname" class="form-control"
+                    [ngClass]="{ 'is-invalid': signupForm.get('fullname')?.invalid && signupForm.get('fullname')?.touched }" />
+                <div class="invalid-feedback"
+                    *ngIf="signupForm.get('fullname')?.invalid && signupForm.get('fullname')?.touched">
+                    Please enter a valid fullname.
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" formControlName="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': signupForm.get('email')?.invalid && signupForm.get('email')?.touched }" />
+                <div class="invalid-feedback"
+                    *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                    Please enter a valid email ending with @gmail.com.
+                </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': signupForm.get('password')?.invalid && signupForm.get('password')?.touched }" />
+                <div class="invalid-feedback"
+                    *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                    Password must be at least 6 characters, contain a lowercase letter and a number.
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success" [disabled]="signupForm.invalid">Sign Up</button>
+            </div>
         </form>
     </div>
 </div>

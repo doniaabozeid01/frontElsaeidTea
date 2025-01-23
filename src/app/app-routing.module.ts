@@ -11,6 +11,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { authenticationGuard } from './guard/authentication.guard';
 
 const routes: Routes = [
 
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path:'about' , component : AboutComponent},
   {path:'login' , component : AuthComponent},
   {path:'signup' , component : SignupComponent},
-  {path:'cart' , component : CartComponent},
+  {path:'cart' , component : CartComponent , canActivate: [authenticationGuard]},
   {path:'product-details' , component : ProductDetailsComponent},
   {path:'payment' , component : PaymentComponent},
   {path:'allorders' , component : AllOrdersComponent},

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CallApisService } from 'src/app/services/call-apis.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,25 +9,70 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-signupForm: FormGroup;
+  signupForm: FormGroup;
+  apiErrorMessage: string | null = null; // لتخزين رسالة الخطأ من الـ API
 
-  constructor(private fb: FormBuilder, private _Router:Router) {
+  constructor(private fb: FormBuilder, private _Router: Router, private callApi: CallApisService) {
     this.signupForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      username: ['', [Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      fullname: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email, this.gmailValidator]],
+      password: ['', [Validators.required, Validators.minLength(6), this.passwordValidator]]
     });
+  }
+
+  // Validator for Gmail emails
+  gmailValidator(control: any): { [key: string]: any } | null {
+    const email: string = control.value;
+    if (email && !email.endsWith('@gmail.com')) {
+      return { invalidGmail: true };
+    }
+    return null;
+  }
+
+  // Validator for password
+  passwordValidator(control: any): { [key: string]: any } | null {
+    const password: string = control.value;
+    const regex = /^(?=.*[a-z])(?=.*\d).{6,}$/; // يحتوي على حرف صغير ورقم
+    if (password && !regex.test(password)) {
+      return { invalidPassword: true };
+    }
+    return null;
   }
 
   onSubmit(): void {
     if (this.signupForm.valid) {
-      console.log('Login Successful:', this.signupForm.value);
-      this._Router.navigate(['/home']);
-    } else {
+      this.apiErrorMessage = null; // إعادة تعيين رسالة الخطأ
+      console.log('Signup Successful:', this.signupForm.value);
+      // Simulating API call here
+      // Replace this with actual API logic
+
+      this.callApi.SignUp(this.signupForm.value).subscribe({
+        next: (response) => {
+          console.log(response);
+          const { token, userId } = response;
+
+          // تخزين البيانات في localStorage
+          localStorage.setItem('token', token);
+          localStorage.setItem('userId', userId);
+          this._Router.navigate(['/home']);
+        },
+        error:(err)=>{
+          console.log(err);
+          this.apiErrorMessage = 'Signup failed. Please try again.';
+        }
+      })
+      // try {
+      //   // Simulated success response
+      //   this._Router.navigate(['/home']);
+      // } catch (error) {
+      //   // Handle API error
+      //   this.apiErrorMessage = 'Signup failed. Please try again.';
+      // }
+    }
+    else {
       console.log('Form is invalid!');
     }
   }
-
 
 
 }

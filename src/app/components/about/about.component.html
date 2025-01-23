@@ -1,58 +1,94 @@
-
-<nav class="navbar navbar-expand-lg w-100 navbar position-fixed ">
+<nav class="navbar navbar-expand-lg position-fixed w-100 navbar d-none d-lg-block ">
     <div class="container-fluid setPadding">
-        <div class=" d-flex justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
             <div class="logo" [routerLink]="'/home'" role="button">
                 <img src="../../../assets/logo.png" class="w-100" alt="">
             </div>
             <a class="navbar-brand fs-4 text-white ms-3" routerLink="/home">شاي الصعيد</a>
         </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
                 <li class="nav-item">
-                    <a class=" nav-link fs-5 text-white" routerLinkActive="active-link"
-                        routerLink="/home">الصفحه
-                        الرئيسيه</a>
+                    <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/home">الصفحه
+                        الرئيسية</a>
                 </li>
                 <li class="nav-item">
-                <a class=" nav-link fs-5 text-white" routerLinkActive="active-link"
-                        routerLink="/about">حول</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class=" nav-link fs-5 text-white" routerLinkActive="active-link" [routerLink]="" fragment="shop">تسوق</a>
-            </li> -->
+                    <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/about">حول</a>
+                </li>
                 <li class="nav-item">
                     <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white" routerLinkActive="active-link"
                         routerLink="/cart"></i>
                 </li>
-                <!-- <li class="nav-item">
-                <i class=" nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link" routerLink="/login"></i>
-            </li> -->
                 <li class="nav-item position-relative">
                     <i class="nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link"
                         routerLink="/login"></i>
-                    <!-- Dropdown Menu -->
                     <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
                         <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
-                        <a class="dropdown-item  fw-semibold  px-2 rounded" (click)="signIn()">
-                            Sign In
-                        </a>
-                        <a class="dropdown-item  fw-semibold  px-2 rounded mb-2" (click)="signOut()">
-                            Sign Out
-                        </a>
+                        <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
+                        <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">تسجيل الخروج</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg d-block d-lg-none position-fixed w-100">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100" style="flex-direction: row-reverse;">
+            <!-- الأيقونات على اليسار (التي كانت في اليمين سابقًا) -->
+            <div class="d-flex align-items-center">
+                <li class="nav-item">
+                    <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white ms-3" routerLink="/cart"></i>
+                </li>
+                <li class="nav-item position-relative">
+                    <i class="nav-link fa-solid fa-user fs-5 text-white ms-3" routerLink="/login"></i>
+                    <div class="dropdown-menu bg-white text-dark p-3 w-auto rounded">
+                        <p class="fw-bold fs-5 mb-2 p-0 m-0">أحمد محمد</p>
+                        <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
+                        <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">تسجيل الخروج</a>
                     </div>
 
                 </li>
+            </div>
 
-            </ul>
+            <!-- الشعار في المنتصف -->
+            <div class="logo d-flex justify-content-center align-items-center" [routerLink]="'/home'" role="button">
+                <p class="p-0 m-0 text-white ">شاي</p>
+                <img src="../../../assets/logo.png" class="logo-img " alt="Logo">
+                <p class="p-0 m-0 text-white">الصعيد</p>
+            </div>
+
+
+            <!-- زر الـ Toggle في اليسار (الذي كان في اليمين سابقًا) -->
+            <button class="navbar-toggler d-flex justify-content-center align-items-center" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white p-1 m-0"></i> </button>
         </div>
+    </div>
+
+    <!-- قائمة الـ Navbar التي تظهر عند الضغط على زر الـ Toggle -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/home">الصفحه
+                    الرئيسية</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/about">حول</a>
+            </li>
+        </ul>
     </div>
 </nav>
 
@@ -173,7 +209,8 @@
         <div class="container text-center ">
             <h2 class="section-title mb-4">عن شاي الصعيد</h2>
             <p class="section-description mb-5">
-                شاي الصعيد هو الخيار المثالي لكل من يبحث عن النكهة الأصيلة والجودة العالية. نحرص على تقديم شاي يتميز بالتقاليد المصرية العريقة. جربه الآن واستمتع بكل لحظة.
+                شاي الصعيد هو الخيار المثالي لكل من يبحث عن النكهة الأصيلة والجودة العالية. نحرص على تقديم شاي يتميز
+                بالتقاليد المصرية العريقة. جربه الآن واستمتع بكل لحظة.
             </p>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">

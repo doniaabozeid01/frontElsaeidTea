@@ -2,8 +2,8 @@
 
 
 
-    <section class="position-relative home" id="home">
-        <nav class="navbar navbar-expand-lg position-fixed w-100 navbar d-none d-lg-block">
+    <section class="position-relative home " id="home">
+        <nav class="navbar navbar-expand-lg position-fixed w-100 navbar d-none d-lg-block ">
             <div class="container-fluid setPadding">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="logo" [routerLink]="'/home'" role="button">
@@ -37,8 +37,9 @@
                                 routerLink="/login"></i>
                             <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
                                 <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
-                                <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">Sign In</a>
-                                <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">Sign Out</a>
+                                <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
+                                <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">تسجيل
+                                    الخروج</a>
                             </div>
                         </li>
                     </ul>
@@ -50,9 +51,10 @@
 
 
 
-          <nav class="navbar navbar-expand-lg d-block d-lg-none position-fixed w-100">
+        <nav class="navbar navbar-expand-lg d-block d-lg-none position-fixed w-100">
             <div class="container-fluid">
-                <div class="d-flex justify-content-between align-items-center w-100" style="flex-direction: row-reverse;">
+                <div class="d-flex justify-content-between align-items-center w-100"
+                    style="flex-direction: row-reverse;">
                     <!-- الأيقونات على اليسار (التي كانت في اليمين سابقًا) -->
                     <div class="d-flex align-items-center">
                         <li class="nav-item">
@@ -60,33 +62,39 @@
                         </li>
                         <li class="nav-item position-relative">
                             <i class="nav-link fa-solid fa-user fs-5 text-white ms-3" routerLink="/login"></i>
-                            <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
-                                <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
-                                <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">Sign In</a>
-                                <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">Sign Out</a>
+                            <div class="dropdown-menu bg-white text-dark p-3 w-auto rounded">
+                                <p class="fw-bold fs-5 mb-2 p-0 m-0">أحمد محمد</p>
+                                <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
+                                <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">تسجيل
+                                    الخروج</a>
                             </div>
+
                         </li>
                     </div>
-        
+
                     <!-- الشعار في المنتصف -->
-                    <div class="logo" [routerLink]="'/home'" role="button" style="flex-grow: 1; display: flex; justify-content: center;">
-                        <img src="../../../assets/logo.png" class="logo-img" alt="Logo">
+                    <div class="logo d-flex justify-content-center align-items-center" [routerLink]="'/home'"
+                        role="button">
+                        <p class="p-0 m-0 text-white ">شاي</p>
+                        <img src="../../../assets/logo.png" class="logo-img " alt="Logo">
+                        <p class="p-0 m-0 text-white">الصعيد</p>
                     </div>
-        
+
+
                     <!-- زر الـ Toggle في اليسار (الذي كان في اليمين سابقًا) -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <button class="navbar-toggler d-flex justify-content-center align-items-center" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars text-white p-1 m-0"></i> </button>
                 </div>
             </div>
-        
+
             <!-- قائمة الـ Navbar التي تظهر عند الضغط على زر الـ Toggle -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/home">الصفحه الرئيسية</a>
+                        <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/home">الصفحه
+                            الرئيسية</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/about">حول</a>
@@ -94,9 +102,6 @@
                 </ul>
             </div>
         </nav>
-        
-          
-          
 
 
 
@@ -146,14 +151,17 @@
 
 
 
-        
+
+
+
+
 
 
         <video src="../../../assets/WhatsApp Video 2025-01-12 at 4.07.05 AM.mp4" autoplay loop muted
             playsinline></video>
 
 
-        <div class="position-relative parent"> <!-- هذا العنصر الأب لـ .content -->
+        <div class="position-relative parent  "> <!-- هذا العنصر الأب لـ .content -->
             <div class="position-absolute content ">
                 <h1 class="text-white pb-0 mb-3">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو
                     اختيارك
@@ -198,7 +206,7 @@
 
 
 
-<!-- 
+    <!-- 
     <section class="w-100 bg-light py-5">
         <section class="product-page py-5">
             <div class="row justify-content-center">
@@ -239,53 +247,61 @@
 
 
 
-    <section class="w-100  py-5">
+    <section class="w-100  py-5   bg-white">
         <section class="product-page py-5">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <!-- Carousel Section -->
-              <div class="col-md-7">
-                <div class="splide" id="image-carousel">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                          <img src="../../../assets/222-ccopy.jpg" alt="شاي الصعيد 3" class="img-fluid rounded">
-                        </li>
-                        <li class="splide__slide">
-                          <img src="../../../assets/2-copy.jpg" alt="شاي الصعيد 1" class="img-fluid rounded">
-                        </li>
-                        <li class="splide__slide">
-                          <img src="../../../assets/22-copy.jpg" alt="شاي الصعيد 2" class="img-fluid rounded">
-                        </li>
-                      </ul>
-                      
-                  </div>
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <!-- Carousel Section -->
+                    <div class="col-md-7">
+                        <div class="splide" id="image-carousel">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="../../../assets/222-ccopy.jpg" alt="شاي الصعيد 3"
+                                            class="img-fluid rounded">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="../../../assets/2-copy.jpg" alt="شاي الصعيد 1"
+                                            class="img-fluid rounded">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="../../../assets/22-copy.jpg" alt="شاي الصعيد 2"
+                                            class="img-fluid rounded">
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text Section -->
+                    <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
+                        <h1 class="text-dark font-weight-bold">شاي الصعيد الفاخر</h1>
+                        <p class="fs-5 text-muted">استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب.
+                            هذا الشاي مصنوع من أجود الأوراق الطبيعية التي تم جمعها بعناية فائقة لضمان تجربة لا مثيل لها.
+                        </p>
+
+                        <p class="fs-5 text-muted">كل ورقة من شاي الصعيد تحمل في طياتها تاريخًا طويلًا من العناية
+                            والاهتمام في زراعتها، مما يضمن لك أفضل طعم وأعلى جودة في كل كوب. بفضل طريقة التحضير الخاصة،
+                            يتم تقديم شاي الصعيد بأفضل نكهة وطعم مميز.</p>
+
+                        <p class="fs-5 text-success mt-3">أفضل جودة بأقل سعر!</p>
+                        <p class="fs-6 text-muted">استمتع بشاي طبيعي يضمن لك نكهة مميزة وراحة تامة، سواء كنت تبدأ يومك
+                            أو تستمتع بلحظات هادئة في المساء.</p>
+
+                        <button class="btn mt-3 px-4 greenBtn" [routerLink]="'/product-details'">عرض التفاصيل</button>
+                    </div>
                 </div>
-              </div>
-      
-              <!-- Text Section -->
-              <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
-                <h1 class="text-dark font-weight-bold">شاي الصعيد الفاخر</h1>
-                <p class="fs-5 text-muted">استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب. هذا الشاي مصنوع من أجود الأوراق الطبيعية التي تم جمعها بعناية فائقة لضمان تجربة لا مثيل لها.</p>
-
-                <p class="fs-5 text-muted">كل ورقة من شاي الصعيد تحمل في طياتها تاريخًا طويلًا من العناية والاهتمام في زراعتها، مما يضمن لك أفضل طعم وأعلى جودة في كل كوب. بفضل طريقة التحضير الخاصة، يتم تقديم شاي الصعيد بأفضل نكهة وطعم مميز.</p>
-
-                <p class="fs-5 text-success mt-3">أفضل جودة بأقل سعر!</p>
-                <p class="fs-6 text-muted">استمتع بشاي طبيعي يضمن لك نكهة مميزة وراحة تامة، سواء كنت تبدأ يومك أو تستمتع بلحظات هادئة في المساء.</p>
-
-                <button class="btn mt-3 px-4 greenBtn" [routerLink]="'/product-details'">عرض التفاصيل</button>
             </div>
-            </div>
-          </div>
         </section>
-      </section>
-      
-      
+    </section>
 
 
 
 
-      
+
+
+
 
 
 
@@ -328,26 +344,15 @@
                 aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner  ">
-            <div class="carousel-item active ">
-                <div class="text-center  w-75 p-5 m-auto">
-                    <h3>احمد علي</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, deserunt quis nesciunt incidunt
-                        magnam quisquam odit quos? Ipsam quae nisi corrupti accusamus nostrum! Architecto optio dolor
-                        nisi
-                        fugiat expedita sapiente!</p>
-                    <p>⭐⭐⭐⭐</p>
+            <div class="carousel-item active" *ngFor="let comment of comments">
+                <div class="text-center w-75 p-5 m-auto ">
+                    <h3>{{comment.user.fullName}}</h3>
+                    <p>{{comment.comment}}</p>
+                    <span *ngFor="let star of [].constructor(comment.rating); let i = index">⭐</span>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="text-center  w-75 p-5 m-auto">
-                    <h3>احمد علي</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, deserunt quis nesciunt incidunt
-                        magnam quisquam odit quos? Ipsam quae nisi corrupti accusamus nostrum! Architecto optio dolor
-                        nisi
-                        fugiat expedita sapiente!</p>
-                    <p>⭐⭐⭐⭐</p>
-                </div>
-            </div>
+            
+
 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -370,7 +375,7 @@
 
 
 
-    <section class="footer bg-info">
+    <section class="footer">
         <h2>شاي الصعيد</h2>
         <p>أفضل شاي من قلب الصعيد، طعم لا يُنسى</p>
 

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Splide from '@splidejs/splide';
+import { CallApisService } from 'src/app/services/call-apis.service';
 // import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
 
 
@@ -9,10 +10,10 @@ import Splide from '@splidejs/splide';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit{
+export class HomeComponent implements AfterViewInit {
 
 
-  constructor(private _Router: Router) {
+  constructor(private _Router: Router, private callApi: CallApisService) {
 
   }
 
@@ -27,7 +28,8 @@ export class HomeComponent implements AfterViewInit{
 
 
   signOut(): void {
-
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId'); // إزالة الـ userId إذا كنت قد خزنتها
   }
 
   signIn(): void {
@@ -70,26 +72,7 @@ export class HomeComponent implements AfterViewInit{
 
 
 
-  comments = [
-    {
-      userName: 'أحمد علي',
-      commentDate: 'قبل ساعة',
-      commentText: 'هذا المنتج رائع جدًا! الطعم مميز جدًا ويستحق التجربة. سأطلبه مرة أخرى بالتأكيد.',
-      rating: 4
-    },
-    {
-      userName: 'مريم محمد',
-      commentDate: 'قبل يومين',
-      commentText: 'المنتج ممتاز، وصلتني العبوة في وقت قياسي وكان طعم الشاي لذيذ جدًا!',
-      rating: 5
-    },
-    {
-      userName: 'سامي أحمد',
-      commentDate: 'قبل 3 أيام',
-      commentText: 'المنتج جيد ولكن لم يعجبني الطعم كما توقعت.',
-      rating: 3
-    }
-  ];
+  comments: any;
 
   currentIndex = 0;
 
@@ -105,10 +88,14 @@ export class HomeComponent implements AfterViewInit{
     }
   }
 
+  stars: string = '';
 
 
-
-
+  getstars(num: number): void {
+    for (var i = 0; i < num; i++) {
+      this.stars += '⭐';
+    }
+  }
 
 
 
@@ -125,13 +112,13 @@ export class HomeComponent implements AfterViewInit{
       pagination: true,
       speed: 1000,
     });
-  
+
     splide.mount();
-  
+
     // تأكد من تحديث Splide بعد تحميل الصور
     splide.refresh();
   }
-  
+
 
 
   ngOnInit(): void {
@@ -145,8 +132,18 @@ export class HomeComponent implements AfterViewInit{
       speed: 1000,
       heightRatio: 0.5,  // لضبط الارتفاع بناءً على العرض
     }).mount();
+
+
+    this.callApi.getAllComments().subscribe({
+      next: (response) => {
+        console.log(response);
+        this.comments = response;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
   }
-  
 
 
 
@@ -175,9 +172,10 @@ export class HomeComponent implements AfterViewInit{
 
 
 
-  
-  
-  
-  
+
+
+
+
+
 
 }

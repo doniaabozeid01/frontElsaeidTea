@@ -167,6 +167,8 @@ nav {
     z-index: 10;
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
+    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
+    text-align: right; /* محاذاة النص إلى اليمين */
 }
 
 .dropdown-menu a {
@@ -450,6 +452,20 @@ nav {
 
 .container-homePage {
     background-image: url('../../../assets/c2741a1e-08de-4888-8a00-febbb8bd3324.jpg');
+    // background-image: url('../../../assets/istockphoto-1492649871-612x612.webp');
+    // background-image: url('../../../assets/avinash-kumar-bqEGHsLSNSg-unsplash.jpg');
+    // background-image: url('../../../assets/mehdi-messrro-cyMS188f2nQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/igor-son-FV_PxCqgtwc-unsplash.jpg');
+    // background-image: url('../../../assets/chua-bing-quan-Sg7eWHKrxrA-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    background-image: url('../../../assets/x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     // background-image: url('../../../assets/77-01.png');
     height: 100vh;
     overflow: auto;
@@ -587,6 +603,17 @@ nav {
     /* المسافات داخل الفوتر */
     text-align: center;
     background-image: url('../../../assets/jaikishan-patel-UmKPjLUyUXU-unsplash.jpg');
+    // background-image: url('../../../assets/chris-carzoli-fHUCy9RO34g-unsplash.jpg');
+    // background-image: url('../../../assets/max-ostwalt-b9Xr2K6nO9A-unsplash.jpg');
+    // background-image: url('../../../assets/bernd-dittrich-VB6qYMfX2Do-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    // background-image: url('../../../assets/cheng-chieh-hsu-yVzU9Nvs2VQ-unsplash.jpg');
+    background-image: url('../../../assets/4.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -682,11 +709,11 @@ nav {
 
 
 
-/* تحسين حجم الصورة بحيث لا تفرش */
-.logo-img {
-    max-width: 200px; /* تغيير الحجم حسب الحاجة */
-    height: auto;
-}
+// /* تحسين حجم الصورة بحيث لا تفرش */
+// .logo-img {
+//     max-width: 200px; /* تغيير الحجم حسب الحاجة */
+//     height: auto;
+// }
 
 
 
@@ -695,6 +722,86 @@ nav {
 //     margin-left: auto;
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    display: flex;
+    justify-content: center; /* للتوسيط الأفقي */
+    align-items: center; /* للتوسيط الرأسي */
+    gap: 10px; /* المسافة بين العناصر */
+}
+
+.logo-img {
+    max-width: 65px; /* تحديد حجم الصورة */
+    height: auto; /* الحفاظ على النسبة الأصلية */
+}
+
+
 li.nav-item::marker {
     content: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-menu {
+    width: auto; /* ليكون العرض على قد المحتوى */
+    min-width: 150px; /* يمكن تعديل الحد الأدنى للعرض حسب الحاجة */
+}
+
+.dropdown-item {
+    white-space: nowrap; /* منع التفاف النص داخل الرابط */
+}
+
+
+@media (max-width:768px) {
+    .dropdown-menu {
+        left: -30%;
+        min-width: 130px;
+
+    }
+    
+}
+
+
+
+.navbar-toggler{
+    font-size: 18px;
 }
