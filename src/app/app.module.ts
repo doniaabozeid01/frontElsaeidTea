@@ -14,9 +14,12 @@ import { AllOrdersComponent } from './components/all-orders/all-orders.component
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { HttpClientModule } from '@angular/common/http'; // استيراد HttpClientModule
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'; // استيراد HttpClientModule
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { LoadingComponent } from './components/loading/loading.component';
+
 
 
 @NgModule({
@@ -32,7 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AllOrdersComponent,
     AboutComponent,
     NavbarComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     })
     
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
