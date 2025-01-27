@@ -2,7 +2,8 @@ import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 
 export const authenticationGuard: CanActivateFn = (route, state) => {
-  const token = localStorage.getItem('token');  // التحقق من وجود الـ token في localStorage
+  // const token = localStorage.getItem('token');  // التحقق من وجود الـ token في localStorage
+  const token = sessionStorage.getItem('token');  // التحقق من وجود الـ token في localStorage
   if (token) {
     return true;  // إذا كان الـ token موجودًا، يسمح بالانتقال إلى المسار
   } else {

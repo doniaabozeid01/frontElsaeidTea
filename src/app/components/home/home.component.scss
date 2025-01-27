@@ -167,8 +167,10 @@ nav {
     z-index: 10;
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
-    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
-    text-align: right; /* محاذاة النص إلى اليمين */
+    direction: rtl;
+    /* اتجاه الكتابة من اليمين لليسار */
+    text-align: right;
+    /* محاذاة النص إلى اليمين */
 }
 
 .dropdown-menu a {
@@ -223,12 +225,15 @@ nav {
 
 
 .splide__slide img {
-    width: 100%; /* تضمن أن الصور تمتد لملء الكاروسيل */
-    height: auto; /* للحفاظ على النسب */
-    object-fit: cover; /* تقطع أو تمدد الصورة بشكل أنيق */
-  }
-  
-  
+    width: 100%;
+    /* تضمن أن الصور تمتد لملء الكاروسيل */
+    height: auto;
+    /* للحفاظ على النسب */
+    object-fit: cover;
+    /* تقطع أو تمدد الصورة بشكل أنيق */
+}
+
+
 
 
 
@@ -487,30 +492,36 @@ nav {
 //     width: 100%;
 //     height: auto;
 //   }
-    
 
-  .splide__slide img {
+
+.splide__slide img {
     width: 95%;
     height: 100%;
-    object-fit: cover; /* هذا يضمن أن الصورة ستملأ العنصر دون تشويه */
-  }
+    object-fit: cover;
+    /* هذا يضمن أن الصورة ستملأ العنصر دون تشويه */
+}
 
-  .splide__list {
+.splide__list {
     display: flex;
     justify-content: center;
-    gap: 10px; /* لضمان وجود مسافة بين الصور */
-  }
+    gap: 10px;
+    /* لضمان وجود مسافة بين الصور */
+}
 
-  .splide__slide img {
-    object-fit: cover; /* يملأ الصورة الحجم المحدد بدون تشويه */
-    object-position: center; /* يحدد المكان الذي ستظهر فيه الصورة */
+.splide__slide img {
+    object-fit: cover;
+    /* يملأ الصورة الحجم المحدد بدون تشويه */
+    object-position: center;
+    /* يحدد المكان الذي ستظهر فيه الصورة */
     margin: auto;
-  }
-  .splide__track {
+}
+
+.splide__track {
     // height: 550px; /* يمكنك تغيير الارتفاع حسب احتياجاتك */
-    overflow: hidden; /* هذا يضمن أن الصور لا تتجاوز الحواف */
-  }
-          
+    overflow: hidden;
+    /* هذا يضمن أن الصور لا تتجاوز الحواف */
+}
+
 
 
 
@@ -524,12 +535,14 @@ nav {
     .splide__slide img {
         width: 98%;
         height: 100%;
-        object-fit: cover; /* هذا يضمن أن الصورة ستملأ العنصر دون تشويه */
-      }
-    
-      .splide__list {
-        gap: 2px; /* لضمان وجود مسافة بين الصور */
-      }
+        object-fit: cover;
+        /* هذا يضمن أن الصورة ستملأ العنصر دون تشويه */
+    }
+
+    .splide__list {
+        gap: 2px;
+        /* لضمان وجود مسافة بين الصور */
+    }
 }
 
 
@@ -551,6 +564,31 @@ nav {
 
 
 
+
+
+
+
+
+
+
+.carousel {
+    height: 40%;
+    /* لضبط ارتفاع العنصر */
+    display: flex;
+    /* لتفعيل Flexbox */
+    align-items: center;
+    /* لمحاذاة المحتوى عموديًا في المنتصف */
+    justify-content: center;
+    /* لمحاذاة المحتوى أفقيًا في المنتصف */
+    text-align: center;
+    /* لتوسيط النصوص */
+}
+
+.carousel-item {
+    height: 300px;
+    text-align: center;
+    /* لتوسيط النصوص */
+}
 
 
 
@@ -744,14 +782,19 @@ nav {
 
 .logo {
     display: flex;
-    justify-content: center; /* للتوسيط الأفقي */
-    align-items: center; /* للتوسيط الرأسي */
-    gap: 10px; /* المسافة بين العناصر */
+    justify-content: center;
+    /* للتوسيط الأفقي */
+    align-items: center;
+    /* للتوسيط الرأسي */
+    gap: 10px;
+    /* المسافة بين العناصر */
 }
 
 .logo-img {
-    max-width: 65px; /* تحديد حجم الصورة */
-    height: auto; /* الحفاظ على النسبة الأصلية */
+    max-width: 65px;
+    /* تحديد حجم الصورة */
+    height: auto;
+    /* الحفاظ على النسبة الأصلية */
 }
 
 
@@ -782,12 +825,15 @@ li.nav-item::marker {
 
 
 .dropdown-menu {
-    width: auto; /* ليكون العرض على قد المحتوى */
-    min-width: 150px; /* يمكن تعديل الحد الأدنى للعرض حسب الحاجة */
+    width: auto;
+    /* ليكون العرض على قد المحتوى */
+    min-width: 150px;
+    /* يمكن تعديل الحد الأدنى للعرض حسب الحاجة */
 }
 
 .dropdown-item {
-    white-space: nowrap; /* منع التفاف النص داخل الرابط */
+    white-space: nowrap;
+    /* منع التفاف النص داخل الرابط */
 }
 
 
@@ -797,11 +843,11 @@ li.nav-item::marker {
         min-width: 130px;
 
     }
-    
+
 }
 
 
 
-.navbar-toggler{
+.navbar-toggler {
     font-size: 18px;
 }

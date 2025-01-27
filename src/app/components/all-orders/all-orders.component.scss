@@ -308,3 +308,14 @@
   }
   
 }
+
+
+
+.msgBtn{
+  transition: color 0.2s ease-in;
+  text-decoration: none;
+}
+
+.msgBtn:hover{
+  color: black!important;
+}

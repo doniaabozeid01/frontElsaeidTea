@@ -15,6 +15,9 @@ import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { HttpClientModule } from '@angular/common/http'; // استيراد HttpClientModule
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,14 @@ import { HttpClientModule } from '@angular/common/http'; // استيراد HttpC
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-
+    BrowserAnimationsModule,  // تأكد من استيراده
+    ToastrModule.forRoot({
+      timeOut: 3000,   // مدة الرسالة (بالملي ثانية)
+      positionClass: 'toast-top-right',  // مكان ظهور الرسالة
+      preventDuplicates: true, // لا تظهر رسائل مكررة بنفس المحتوى
+      closeButton: true, // إضافة زر إغلاق
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

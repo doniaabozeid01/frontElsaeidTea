@@ -1,5 +1,3 @@
-
-
 <div class="w-100 d-flex justify-content-center align-items-center auth">
     <div class="login-container p-5">
         <div class="rounder cover m-auto mb-4 mt-0 pt-0">
@@ -7,7 +5,7 @@
         </div>
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
             <!-- Error message from API -->
-            
+
 
             <!-- Email Field -->
             <div class="form-group">
@@ -28,7 +26,11 @@
             </div>
             <!-- Submit Button -->
             <div class="d-flex align-items-center flex-column">
-                <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+                <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login
+                    <div *ngIf="isAddingToCart" class="spinner-border spinner-border-sm me-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </button>
                 <button type="button" class="signupbutton" [routerLink]="'/signup'">Sign Up</button>
             </div>
         </form>

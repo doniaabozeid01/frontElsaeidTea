@@ -9,65 +9,12 @@ import { CallApisService } from 'src/app/services/call-apis.service';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-  // loginForm: FormGroup;
-
-  // constructor(private fb: FormBuilder, private callApi: CallApisService, private router:Router) {
-  //   this.loginForm = this.fb.group({
-  //     email: ['', [Validators.required, Validators.email]],
-  //     password: ['', [Validators.required, Validators.minLength(6)]]
-  //   });
-  // }
-
-  // onSubmit(): void {
-  //   if (this.loginForm.valid) {
-  //     console.log('Login Successful:', this.loginForm.value);
-  //     this.callApi.Login(this.loginForm).subscribe({
-  //       next:(response)=>{
-  //         console.log(response);
-  //         this.router.navigate(['/home']);
-  //       },
-  //       error:(err)=>{
-  //         console.log(err);
-  //       }
-  //     });
-
-
-
-
-  //   } else {
-  //     console.log('Form is invalid!');
-  //   }
-  // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   loginForm: FormGroup;
   apiErrorMessage: string | null = null; // لتخزين رسالة الخطأ من الـ API
+  isAddingToCart:boolean = false; // إيقاف التحميل عند النجاح
+
+
 
   constructor(private fb: FormBuilder, private callApi: CallApisService, private router: Router) {
     this.loginForm = this.fb.group({
@@ -77,20 +24,23 @@ export class AuthComponent {
   }
 
   onSubmit(): void {
+    this.isAddingToCart = true; // إيقاف التحميل عند النجاح
     if (this.loginForm.valid) {
       this.apiErrorMessage = null; // إعادة تعيين رسالة الخطأ
       console.log('Login Attempt:', this.loginForm.value);
       this.callApi.Login(this.loginForm.value).subscribe({
         next: (response) => {
+          this.isAddingToCart = false; // إيقاف التحميل عند النجاح
           console.log(response);
-          const { token, userId } = response;
-
+          const { token } = response;
           // تخزين البيانات في localStorage
-          localStorage.setItem('token', token);
-          localStorage.setItem('userId', userId);
+          // localStorage.setItem('token', token);
+          sessionStorage.setItem('token', token);
+          // localStorage.setItem('userId', userId);
           this.router.navigate(['/home']);
         },
         error: (err) => {
+          this.isAddingToCart = false; // إيقاف التحميل عند النجاح
           console.log(err);
           // عرض رسالة عامة عند الخطأ
           this.apiErrorMessage = 'Invalid email or password.';

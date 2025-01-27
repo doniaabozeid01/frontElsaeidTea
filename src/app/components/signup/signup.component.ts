@@ -11,6 +11,7 @@ import { CallApisService } from 'src/app/services/call-apis.service';
 export class SignupComponent {
   signupForm: FormGroup;
   apiErrorMessage: string | null = null; // لتخزين رسالة الخطأ من الـ API
+  isAddingToCart:boolean = false; // إيقاف التحميل عند النجاح
 
   constructor(private fb: FormBuilder, private _Router: Router, private callApi: CallApisService) {
     this.signupForm = this.fb.group({
@@ -40,25 +41,35 @@ export class SignupComponent {
   }
 
   onSubmit(): void {
+    this.isAddingToCart = true; // إيقاف التحميل عند النجاح
+
     if (this.signupForm.valid) {
       this.apiErrorMessage = null; // إعادة تعيين رسالة الخطأ
-      console.log('Signup Successful:', this.signupForm.value);
+      // console.log('Signup Successful:', this.signupForm.value);
       // Simulating API call here
       // Replace this with actual API logic
 
       this.callApi.SignUp(this.signupForm.value).subscribe({
         next: (response) => {
+          this.isAddingToCart = false; // إيقاف التحميل عند النجاح
           console.log(response);
-          const { token, userId } = response;
+          const { token} = response;
 
           // تخزين البيانات في localStorage
-          localStorage.setItem('token', token);
-          localStorage.setItem('userId', userId);
+          // localStorage.setItem('token', token);
+          sessionStorage.setItem('token', token);
+          // localStorage.setItem('userId', userId);
           this._Router.navigate(['/home']);
         },
         error:(err)=>{
-          console.log(err);
-          this.apiErrorMessage = 'Signup failed. Please try again.';
+          this.isAddingToCart = false; // إيقاف التحميل عند النجاح
+          console.log(err.error);
+          if(err.error != null){
+            this.apiErrorMessage = err.error;
+          }
+          else{
+            this.apiErrorMessage = 'Signup failed. Please try again.';
+          }
         }
       })
       // try {
@@ -75,4 +86,28 @@ export class SignupComponent {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  showPassword: boolean = false;
+
+
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
+
+
+
+
+  
 }

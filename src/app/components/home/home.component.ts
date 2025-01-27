@@ -12,6 +12,7 @@ import { CallApisService } from 'src/app/services/call-apis.service';
 })
 export class HomeComponent implements AfterViewInit {
 
+  fullName:any='';
 
   constructor(private _Router: Router, private callApi: CallApisService) {
 
@@ -28,8 +29,9 @@ export class HomeComponent implements AfterViewInit {
 
 
   signOut(): void {
-    localStorage.removeItem('token');
-    localStorage.removeItem('userId'); // إزالة الـ userId إذا كنت قد خزنتها
+    // localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
+    this.fullName=''
   }
 
   signIn(): void {
@@ -72,30 +74,48 @@ export class HomeComponent implements AfterViewInit {
 
 
 
-  comments: any;
+  // comments: any;
 
-  currentIndex = 0;
+  // currentIndex = 0;
 
-  nextComment() {
-    if (this.currentIndex < this.comments.length - 1) {
-      this.currentIndex++;
-    }
+  // nextComment() {
+  //   if (this.currentIndex < this.comments.length - 1) {
+  //     this.currentIndex++;
+  //   }
+  // }
+
+  // prevComment() {
+  //   if (this.currentIndex > 0) {
+  //     this.currentIndex--;
+  //   }
+  // }
+
+  // stars: string = '';
+
+
+  // getstars(num: number): void {
+  //   for (var i = 0; i < num; i++) {
+  //     this.stars += '⭐';
+  //   }
+  // }
+
+
+
+  comments: any[] = [];
+
+
+  stars(num: number): string {
+    return '⭐'.repeat(num);
   }
 
-  prevComment() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    }
-  }
-
-  stars: string = '';
 
 
-  getstars(num: number): void {
-    for (var i = 0; i < num; i++) {
-      this.stars += '⭐';
-    }
-  }
+
+
+
+
+
+
 
 
 
@@ -142,8 +162,35 @@ export class HomeComponent implements AfterViewInit {
       error: (err) => {
         console.log(err);
       }
+    });
+
+
+
+
+    this.callApi.getFullNameFromToken().subscribe({
+      next:(response)=>{
+        console.log(response);
+        this.fullName = response.fullName;
+        
+      },
+      error:(err)=>{
+        console.log(err);
+        
+      }
     })
+
+
+
+
+
+
   }
+
+
+
+
+
+
 
 
 

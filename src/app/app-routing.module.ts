@@ -25,7 +25,7 @@ const routes: Routes = [
   {path:'signup' , component : SignupComponent},
   {path:'cart' , component : CartComponent , canActivate: [authenticationGuard]},
   {path:'product-details' , component : ProductDetailsComponent},
-  {path:'payment' , component : PaymentComponent},
+  {path:'payment' , component : PaymentComponent, canActivate: [authenticationGuard]},
   {path:'allorders' , component : AllOrdersComponent},
   { path: '', component: HomeComponent }
 

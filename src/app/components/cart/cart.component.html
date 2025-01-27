@@ -13,7 +13,7 @@
                     <p class="cart-item-price">د.ك {{ item.productDetails.price }}</p>
                 </div>
                 <div class="cart-item-actions">
-                    <input type="number" [(ngModel)]="item.quantity" class="item-quantity">
+                    <input type="number" [(ngModel)]="item.quantity" (click)="UpdateCart(item.id,item)" class="item-quantity">
                     <button class="btn remove-item" (click)="removeItem(item.id)">إزالة</button>
                 </div>
             </div>
@@ -23,7 +23,10 @@
             <p class="summary-item p-0 m-0">
                 <strong>السعر الكلي:</strong> د.ك {{ getTotalPrice() }}
             </p>
-            <button class="btn proceed-to-checkout" routerLink="/payment">الانتقال إلى الدفع</button>
+            <button class="btn proceed-to-checkout" routerLink="/payment" >
+                
+            الانتقال إلى الدفع
+        </button>
         </div>
         
         <button class="btn back-to-home mt-5" routerLink="/">العودة إلى الصفحة الرئيسية</button>
