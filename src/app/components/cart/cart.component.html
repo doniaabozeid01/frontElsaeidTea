@@ -1,35 +1,36 @@
+<div class="parent m-0 p-0 pt">
 
-<div class="parent m-0 p-0 pt-5">
-
-    <div class="cart-container ">
+    <div class="cart-container pt">
         <h2 class="cart-title">سلة التسوق</h2>
         <div class="cart-items">
             <!-- عنصر من السلة -->
             <div class="cart-item" *ngFor="let item of cartItems">
-                <img src="../../../assets/c.jpg" alt="صورة المنتج" class="cart-item-image ms-3 me-0 p-0">
+                <!-- <img src="./assets/c.jpg" alt="صورة المنتج" class="cart-item-image ms-3 me-0 p-0"> -->
+                <img src="./assets/16-01.jpg" alt="صورة المنتج" class="cart-item-image ms-3 me-0 p-0">
                 <div class="cart-item-details">
                     <p class="cart-item-name">شاي الصعيد</p>
                     <p class="cart-item-quantity">جرام {{ item.productDetails.weight }}</p>
                     <p class="cart-item-price">د.ك {{ item.productDetails.price }}</p>
                 </div>
                 <div class="cart-item-actions">
-                    <input type="number" [(ngModel)]="item.quantity" (click)="UpdateCart(item.id,item)" class="item-quantity">
+                    <input type="number" [(ngModel)]="item.quantity" (click)="UpdateCart(item.id,item)"
+                        class="item-quantity">
                     <button class="btn remove-item" (click)="removeItem(item.id)">إزالة</button>
                 </div>
             </div>
         </div>
-        
+
         <div class="cart-summary">
             <p class="summary-item p-0 m-0">
                 <strong>السعر الكلي:</strong> د.ك {{ getTotalPrice() }}
             </p>
-            <button class="btn proceed-to-checkout" routerLink="/payment" >
-                
-            الانتقال إلى الدفع
-        </button>
+            <!-- <button class="btn proceed-to-checkout" routerLink="/payment" > -->
+            <button class="btn proceed-to-checkout" (click)="goToPayment()">
+                الانتقال إلى الدفع
+            </button>
         </div>
-        
+
         <button class="btn back-to-home mt-5" routerLink="/">العودة إلى الصفحة الرئيسية</button>
     </div>
-    
+
 </div>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CallApisService } from 'src/app/services/call-apis.service';
+import { JwtDecoderService } from 'src/app/services/jwt-decoder.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,7 +11,7 @@ import { CallApisService } from 'src/app/services/call-apis.service';
 })
 export class CartComponent {
 
-  constructor(private router: Router, private callApi: CallApisService) { }
+  constructor(private router: Router, private callApi: CallApisService, private toastr: ToastrService, private jwtDecoderService: JwtDecoderService) { }
 
   cartItems: any;
   userId!: string;
@@ -17,7 +19,7 @@ export class CartComponent {
 
 
 
-  
+
   getTotalPrice(): number {
     if (!this.cartItems || this.cartItems.length === 0) {
       return 0;
@@ -50,16 +52,16 @@ export class CartComponent {
     // this.token = localStorage.getItem('token');
     this.token = sessionStorage.getItem('token');
     console.log(this.token);
-  
+    this.checkExpiredToken();
     // جلب userId من التوكن
     this.callApi.getUserIdFromToken().subscribe({
       next: (response) => {
         console.log("response : ", response);
-  
+
         // تعيين الـ userId
-        this.userId = response.userId; 
+        this.userId = response.userId;
         console.log("cart userId : ", this.userId);
-  
+
         // جلب العناصر الموجودة في السلة بناءً على userId
         this.callApi.getCartItemsByUserId(this.userId).subscribe({
           next: (response) => {
@@ -76,7 +78,7 @@ export class CartComponent {
       }
     });
   }
-  
+
 
 
 
@@ -101,18 +103,45 @@ export class CartComponent {
     })
 
   }
-  // GetProductName(id: number): string {
-  //   this.callApi.GetProductById(id).subscribe({
-  //     next: (response) => {
-  //       console.log(response);
-  //       return response.name;
-  //     },
-  //     error: (err) => {
-  //       return '';
-  //     }
-  //   })
-  //   return '';
 
-  // }
 
+
+  goToPayment(): void {
+    const tokenPayload = this.checkExpiredToken(); // استدعاء الدالة التي تفك التوكين
+    const expTime = tokenPayload.exp * 1000; // تحويل `exp` إلى ميلي ثانية
+    console.log("date.now : ", Date.now());
+    console.log("expTime : ", expTime);
+
+
+    const nowUtc = new Date(Date.now()); // توقيت UTC
+    const nowLocal = new Date(); // توقيت الجهاز المحلي
+
+    console.log("🕰 UTC Time: ", nowUtc.toISOString()); // تنسيق UTC الكامل
+    console.log("📍 Local Time: ", nowLocal.toLocaleString()); // تنسيق التوقيت المحلي
+
+
+    if (Date.now() > expTime) {
+      this.toastr.warning('برجاء تسجيل الدخول','انتهت الجلسه')
+      this.router.navigate(['/login']);
+    }
+
+    // tokenPayload.exp * 1000; // تحويل `exp` إلى ميلي ثانية
+
+    // return Date.now() > expTime; // مقارنة الوقت الحالي مع انتهاء الصلاحية
+
+    if (this.getTotalPrice() <= 0) {
+      this.toastr.warning('لا يوجد شئ في السله او ربما اختيارك للكميه خاطئ', 'تحذير')
+      this.router.navigate(['/cart']);
+    }
+    else {
+      this.router.navigate(['/payment']);
+    }
+  }
+
+  decoderToken: any;
+  checkExpiredToken(): any {
+    this.decoderToken = this.jwtDecoderService.decodeToken(this.token);
+    console.log("this.decoderToken : ", this.decoderToken);
+    return this.decoderToken;
+  }
 }

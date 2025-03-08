@@ -9,7 +9,8 @@ export class CallApisService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = "http://elsaeedtea.somee.com/api/";
+  // baseUrl: string = "http://elsaeedtea.somee.com/api/";
+  baseUrl: string = "http://elsaeidtea.runasp.net/api/";
   // API لإضافة المنتج
   // addProduct(productData: any): Observable<any> {
   //   return this.http.post(`${this.baseUrl}Tea/AddTeaProduct`, productData);
@@ -152,5 +153,16 @@ export class CallApisService {
       headers: headers
     });
   }
+
+
+  ForgotPassword(data: any) {
+    return this.http.post(`${this.baseUrl}Account/forgotPassword`, data);
+  }
+  
+
+  ResetPassword(data: { email: string; token: string; newPassword: string }) {
+    return this.http.post(`${this.baseUrl}Account/resetPassword`, data);
+  }
+  
 
 }

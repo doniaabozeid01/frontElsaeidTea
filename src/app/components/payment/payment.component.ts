@@ -108,21 +108,4 @@ export class PaymentComponent implements OnInit{
     return null;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
 }

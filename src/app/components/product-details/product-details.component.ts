@@ -21,7 +21,7 @@ export class ProductDetailsComponent {
   stars = [1, 2, 3, 4, 5]; // مصفوفة النجوم
   userComment: string = ''; // تعليق المستخدم
   userId: string = '';
-  productId: number = 21;
+  productId: number = 1;
   token!: any;
   isAddingToCart: boolean = false;
 
@@ -82,6 +82,8 @@ export class ProductDetailsComponent {
       next: (response) => {
         console.log(response);
         this.product = response[0];
+        console.log("this.product.name : ", this.product.name);
+        
         // تعيين أول حجم كافتراضي
         this.selectedSize = this.product.details[0].id;
         this.selectedPrice = this.product.details[0].price;

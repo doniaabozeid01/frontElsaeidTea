@@ -1,37 +1,54 @@
 <div class="w-100 d-flex justify-content-center align-items-center auth">
-    <div class="login-container p-5">
+    <div class="login-container">
         <div class="rounder cover m-auto mb-4 mt-0 pt-0">
-            <img src="../../../assets/logo.png" class="w-100 h-100" alt="">
+            <img src="./assets/logo.png" class="w-100 h-100" alt="Logo">
         </div>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+            
             <!-- Error message from API -->
-
+            <div *ngIf="apiErrorMessage" class="alert alert-danger text-center">
+                {{ apiErrorMessage }}
+            </div>
 
             <!-- Email Field -->
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">البريد الإلكتروني <span class="text-success">*</span></label>
                 <input id="email" type="email" formControlName="email" class="form-control" />
             </div>
 
-            <!-- Password Field -->
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" type="password" formControlName="password" class="form-control" />
+
+            <div class="form-group position-relative">
+                <label for="password">كلمة المرور <span class="text-success">*</span></label>
+                <div class="position-relative">
+                    <input id="password" [type]="showPassword ? 'text' : 'password'" formControlName="password" class="form-control pr-5" />
+                    <button type="button" class="toggle-password" (click)="showPassword = !showPassword">
+                        <i [ngClass]="showPassword ? 'bi bi-eye-slash-fill' : 'bi bi-eye-fill'"></i>
+                    </button>
+                </div>
+                <div class="text-end mt-1">
+                    <button type="button" class="btn btn-link p-0 text-success" [routerLink]="'/forgot-password'">
+                        هل نسيت كلمة المرور؟
+                    </button>
+                </div>
             </div>
+            
+            
 
 
 
-            <div *ngIf="apiErrorMessage" class="alert alert-danger">
-                {{ apiErrorMessage }}
-            </div>
+
             <!-- Submit Button -->
-            <div class="d-flex align-items-center flex-column">
-                <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login
-                    <div *ngIf="isAddingToCart" class="spinner-border spinner-border-sm me-2" role="status">
+            <div class="d-flex flex-column align-items-center">
+                <button type="submit" class="btn btn-success w-100" [disabled]="loginForm.invalid">
+                    تسجيل الدخول
+                    <div *ngIf="isAddingToCart" class="spinner-border spinner-border-sm ms-2" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                 </button>
-                <button type="button" class="signupbutton" [routerLink]="'/signup'">Sign Up</button>
+                
+                <button type="button" class="btn btn-outline-success w-100 mt-2" [routerLink]="'/signup'">
+                    إنشاء حساب جديد
+                </button>
             </div>
         </form>
     </div>

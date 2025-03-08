@@ -1,8 +1,10 @@
 .product-details {
     padding: 20px;
     background-color: #fff;
-    max-width: 800px;  /* لضبط العرض */
-    margin: 0 auto;  /* لضبط المنتصف */
+    max-width: 800px;
+    /* لضبط العرض */
+    margin: 0 auto;
+    /* لضبط المنتصف */
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border: 1px solid greenyellow;
@@ -15,8 +17,9 @@
 }
 
 .product-image {
-    width: 200px;  /* لتحديد عرض الصورة */
-    height: 180px;
+    width: 180px;
+    /* لتحديد عرض الصورة */
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -177,7 +180,7 @@
 
 
 @media (max-width:768px) {
-    .product-details{
+    .product-details {
         max-width: 95%;
     }
 }
@@ -197,3 +200,13 @@
 
 
 
+.pt {
+    padding-top: 48px;
+}
+
+@media (max-width:768px) {
+
+    .pt {
+        padding-top: 20px;
+    }
+}

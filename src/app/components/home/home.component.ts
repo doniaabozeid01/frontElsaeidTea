@@ -12,8 +12,8 @@ import { CallApisService } from 'src/app/services/call-apis.service';
 })
 export class HomeComponent implements AfterViewInit {
 
-  fullName:any='';
-
+  fullName: any = '';
+  token: any;
   constructor(private _Router: Router, private callApi: CallApisService) {
 
   }
@@ -25,22 +25,17 @@ export class HomeComponent implements AfterViewInit {
     }
   }
 
-
-
-
   signOut(): void {
     // localStorage.removeItem('token');
-    sessionStorage.removeItem('token');
-    this.fullName=''
+    if (this.token != null){  
+      sessionStorage.removeItem('token');
+      this.fullName = ''
+    }
   }
 
   signIn(): void {
     this._Router.navigate(['/login']);
   }
-
-
-
-
 
   product = {
     name: 'شاي الصعيد الفاخر',
@@ -53,53 +48,6 @@ export class HomeComponent implements AfterViewInit {
     console.log('Product added to cart');
   }
 
-  // count: number = 1;
-
-  // add() {
-  //   ++this.count;
-  // }
-  // minus() {
-  //   if (this.count >= 2)
-  //     --this.count;
-  // }
-
-
-
-
-
-
-
-
-
-
-
-
-  // comments: any;
-
-  // currentIndex = 0;
-
-  // nextComment() {
-  //   if (this.currentIndex < this.comments.length - 1) {
-  //     this.currentIndex++;
-  //   }
-  // }
-
-  // prevComment() {
-  //   if (this.currentIndex > 0) {
-  //     this.currentIndex--;
-  //   }
-  // }
-
-  // stars: string = '';
-
-
-  // getstars(num: number): void {
-  //   for (var i = 0; i < num; i++) {
-  //     this.stars += '⭐';
-  //   }
-  // }
-
-
 
   comments: any[] = [];
 
@@ -107,19 +55,6 @@ export class HomeComponent implements AfterViewInit {
   stars(num: number): string {
     return '⭐'.repeat(num);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   ngAfterViewInit(): void {
@@ -166,63 +101,24 @@ export class HomeComponent implements AfterViewInit {
 
 
 
+    this.token = sessionStorage.getItem('token');
+    if(this.token != null){
+      this.callApi.getFullNameFromToken().subscribe({
 
-    this.callApi.getFullNameFromToken().subscribe({
-      next:(response)=>{
-        console.log(response);
-        this.fullName = response.fullName;
-        
-      },
-      error:(err)=>{
-        console.log(err);
-        
-      }
-    })
-
-
-
-
-
+        next: (response) => {
+          console.log(response);
+          this.fullName = response.fullName;
+          if(this.fullName.split(' ').length > 2){
+            this.fullName = this.fullName.split(' ')[0] + ' ' + this.fullName.split(' ')[1]
+          }
+        },
+        error: (err) => {
+          console.log(err);
+  
+        }
+      })
+    }
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

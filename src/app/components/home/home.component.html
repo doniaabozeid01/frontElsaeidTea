@@ -1,4 +1,4 @@
-<section class="container-homePage ">
+<section class="container-homePage pb-0 mb-0">
 
 
 
@@ -7,7 +7,7 @@
             <div class="container-fluid setPadding">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="logo" [routerLink]="'/home'" role="button">
-                        <img src="../../../assets/logo.png" class="w-100" alt="">
+                        <img src="./assets/logo.png" class="w-100" alt="">
                     </div>
                     <a class="navbar-brand fs-4 text-white ms-3" routerLink="/home">شاي الصعيد</a>
                 </div>
@@ -62,12 +62,12 @@
                 <div class="d-flex justify-content-between align-items-center w-100"
                     style="flex-direction: row-reverse;">
                     <!-- الأيقونات على اليسار (التي كانت في اليمين سابقًا) -->
-                    <div class="d-flex align-items-center">
-                        <li class="nav-item">
-                            <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white ms-3" routerLink="/cart"></i>
+                    <div class="d-flex align-items-center justify-content-end ">
+                        <li class="nav-item ">
+                            <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white ms-2" routerLink="/cart"></i>
                         </li>
-                        <li class="nav-item position-relative">
-                            <i class="nav-link fa-solid fa-user fs-5 text-white ms-3" routerLink="/login"></i>
+                        <li class="nav-item position-relative ">
+                            <i class="nav-link fa-solid fa-user fs-5 text-white " routerLink="/login"></i>
                             <div class="dropdown-menu bg-white text-dark p-3 w-auto rounded">
                                 <p class="fw-bold fs-5 mb-2 p-0 m-0">{{fullName}}</p>
                                 <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
@@ -79,10 +79,10 @@
                     </div>
 
                     <!-- الشعار في المنتصف -->
-                    <div class="logo d-flex justify-content-center align-items-center" [routerLink]="'/home'"
+                    <div class="logo d-flex justify-content-center align-items-center w-50" [routerLink]="'/home'"
                         role="button">
                         <p class="p-0 m-0 text-white ">شاي</p>
-                        <img src="../../../assets/logo.png" class="logo-img " alt="Logo">
+                        <img src="./assets/logo.png" class="logo-img " alt="Logo">
                         <p class="p-0 m-0 text-white">الصعيد</p>
                     </div>
 
@@ -103,7 +103,8 @@
                             الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/allorders">طلباتي السابقه</a>
+                        <a class="nav-link fs-5 text-white" routerLinkActive="active-link"
+                            routerLink="/allorders">طلباتي السابقه</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-5 text-white" routerLinkActive="active-link" routerLink="/about">حول</a>
@@ -113,66 +114,13 @@
         </nav>
 
 
+        <!-- <video src="./assets/WhatsApp Video 2025-01-12 at 4.07.05 AM.mp4" autoplay loop muted></video> -->
+        <video src="./assets/WhatsApp Video 2025-01-12 at 4.07.05 AM.mp4" autoplay loop muted playsinline
+            preload="auto"></video>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <video src="../../../assets/WhatsApp Video 2025-01-12 at 4.07.05 AM.mp4" autoplay loop muted
-            playsinline></video>
-
-
-        <div class="position-relative parent  "> <!-- هذا العنصر الأب لـ .content -->
+        <div class="position-relative parent "> <!-- هذا العنصر الأب لـ .content -->
             <div class="position-absolute content ">
-                <h1 class="text-white pb-0 mb-3">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو
+                <h1 class="text-white pb-0 mb-3 ">استمتع بنكهة أصيلة، <span class="bold d-block">شاي الصعيد</span> هو
                     اختيارك
                     المثالي للراحة والدفء.</h1>
                 <button class="btn my-1 greenBtn" [routerLink]="'/product-details'"> اشتر الاّن</button>
@@ -183,99 +131,26 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- 
-    <section class="w-100 bg-light py-5">
-        <section class="product-page py-5">
-            <div class="row justify-content-center">
-    
-                <div class="col-md-7">
-                    <div class="row g-3 justify-content-center">
-                        <div class="col-md-6 tr">
-                            <img src="../../../assets/2-copy.jpg" class="w-100 h-100" alt="شاي الصعيد 1">
-                        </div>
-                        <div class="col-md-6 tl">
-                            <img src="../../../assets/22-copy.jpg" class="w-100 h-100" alt="شاي الصعيد 2">
-                        </div>
-                    </div>
-                    <div class="col-md-12 mt-3 b">
-                        <img src="../../../assets/222-ccopy.jpg" class="w-100 h-100" alt="شاي الصعيد 3">
-                    </div>
-                </div>
-    
-                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
-                    <h1 class="text-dark font-weight-bold">شاي الصعيد الفاخر</h1>
-                    <p class="fs-5 text-muted">استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب. هذا الشاي مصنوع من أجود الأوراق الطبيعية التي تم جمعها بعناية فائقة لضمان تجربة لا مثيل لها.</p>
-    
-                    <p class="fs-5 text-muted">كل ورقة من شاي الصعيد تحمل في طياتها تاريخًا طويلًا من العناية والاهتمام في زراعتها، مما يضمن لك أفضل طعم وأعلى جودة في كل كوب. بفضل طريقة التحضير الخاصة، يتم تقديم شاي الصعيد بأفضل نكهة وطعم مميز.</p>
-    
-                    <p class="fs-5 text-success mt-3">أفضل جودة بأقل سعر!</p>
-                    <p class="fs-6 text-muted">استمتع بشاي طبيعي يضمن لك نكهة مميزة وراحة تامة، سواء كنت تبدأ يومك أو تستمتع بلحظات هادئة في المساء.</p>
-    
-                    <button class="btn mt-3 px-4 greenBtn" [routerLink]="'/product-details'">عرض التفاصيل</button>
-                </div>
-    
-            </div>
-        </section>
-    </section> -->
-
-
-
-
-
-
-
     <section class="w-100  py-5   bg-white">
         <section class="product-page py-5">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <!-- Carousel Section -->
-                    <div class="col-md-7">
+                    <div class="col-md-7 p-0">
                         <div class="splide" id="image-carousel">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <img src="../../../assets/222-ccopy.jpg" alt="شاي الصعيد 3"
-                                            class="img-fluid rounded">
+                                    <li class="splide__slide h-350">
+                                        <img src="./assets/black-tea-served-traditional-armudu-glass (1).jpg"
+                                            alt="شاي الصعيد 3" class="img-fluid rounded h-100">
                                     </li>
-                                    <li class="splide__slide">
-                                        <img src="../../../assets/2-copy.jpg" alt="شاي الصعيد 1"
-                                            class="img-fluid rounded">
+                                    <li class="splide__slide  h-350">
+                                        <img src="./assets/front-view-sweet-tea-table-with-glass-armudu-tea (1).jpg"
+                                            alt="شاي الصعيد 1" class="img-fluid rounded h-100">
                                     </li>
-                                    <li class="splide__slide">
-                                        <img src="../../../assets/22-copy.jpg" alt="شاي الصعيد 2"
-                                            class="img-fluid rounded">
+                                    <li class="splide__slide  h-350">
+                                        <img src="./assets/side-view-tea-pouring-into-armudu-glass.jpg"
+                                            alt="شاي الصعيد 2" class="img-fluid rounded h-100">
                                     </li>
                                 </ul>
 
@@ -286,16 +161,16 @@
                     <!-- Text Section -->
                     <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
                         <h1 class="text-dark font-weight-bold">شاي الصعيد الفاخر</h1>
-                        <p class="fs-5 text-muted">استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب.
+                        <p class="fs text-muted">استمتع بنكهة أصيلة مع شاي الصعيد الذي يمنحك راحة واسترخاء في كل كوب.
                             هذا الشاي مصنوع من أجود الأوراق الطبيعية التي تم جمعها بعناية فائقة لضمان تجربة لا مثيل لها.
                         </p>
 
-                        <p class="fs-5 text-muted">كل ورقة من شاي الصعيد تحمل في طياتها تاريخًا طويلًا من العناية
+                        <p class="fs text-muted">كل ورقة من شاي الصعيد تحمل في طياتها تاريخًا طويلًا من العناية
                             والاهتمام في زراعتها، مما يضمن لك أفضل طعم وأعلى جودة في كل كوب. بفضل طريقة التحضير الخاصة،
                             يتم تقديم شاي الصعيد بأفضل نكهة وطعم مميز.</p>
 
                         <p class="fs-5 text-success mt-3">أفضل جودة بأقل سعر!</p>
-                        <p class="fs-6 text-muted">استمتع بشاي طبيعي يضمن لك نكهة مميزة وراحة تامة، سواء كنت تبدأ يومك
+                        <p class="fs text-muted">استمتع بشاي طبيعي يضمن لك نكهة مميزة وراحة تامة، سواء كنت تبدأ يومك
                             أو تستمتع بلحظات هادئة في المساء.</p>
 
                         <button class="btn mt-3 px-4 greenBtn" [routerLink]="'/product-details'">عرض التفاصيل</button>
@@ -309,32 +184,20 @@
 
 
 
+    <section class="vlog ">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="vlog">
-
-        <div class="video-container py-5">
-            <video autoplay muted loop class="background-video">
-                <source src="../../../assets/Comp 1.mp4" type="video/mp4" />
+        <div class="video-container py-5 ">
+            <video autoplay loop muted playsinline preload="auto" class="background-video desktop-video">
+                <source src="./assets/Comp 1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
+
+
+            <video autoplay loop muted playsinline preload="auto" class="background-video mobile-video">
+                <source src="./assets/Comp 1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
             <div class="overlay"></div>
         </div>
     </section>
@@ -376,39 +239,64 @@
 
 
 
+    <section class="footer py-5">
+
+        <div class="footer-content row container m-auto justify-content-center align-items-center  padtop">
+            <div class="col-md-4 head ">
+                <h3>شاي الصعيد</h3>
+                <p>أفضل شاي من قلب الصعيد، طعم لا يُنسى</p>
+            </div>
+
+            <div class="col-md-8 ">
+                <div class="about">
+                    <p>شاي الصعيد هو رمز للضيافة والأصالة. مستوحى من الأرض الصعيدية الخصبة، يقدم لك شايًا طبيعيًا ذو
+                        نكهة غنية ومميزة. نحن نقدم لك تجربة شاي فريدة، حيث نستخدم أفضل الأوراق المختارة بعناية من
+                        الأراضي الصعيدية لنوفر لك أفضل جودة في كل كوب.</p>
+                    <p>منذ البداية وحتى آخر رشفة، نحن نحرص على تقديم منتج يواكب أعلى معايير الجودة والذوق الرفيع. سواء
+                        كنت تستمتع بمذاقه في صباحك الباكر أو في استراحة قصيرة، شاي الصعيد هو الخيار المثالي لك.</p>
+                </div>
+
+                <div class="shipping">
+                    <p>نحن نقدم خدمة توصيل سريعة إلى جميع أنحاء جمهورية مصر العربية. يمكنك طلب شاي الصعيد بسهولة وسيتولى
+                        فريقنا عملية التوصيل بكل احترافية.</p>
+                </div>
+
+                <div class="message">
+                    <p>نحن في "شاي الصعيد" نعتبر كل كوب شاي ليس مجرد مشروب بل تجربة حقيقية تمتزج فيها الجودة والذوق.
+                        دعونا نكون جزءًا من لحظاتك اليومية التي تستحق التميز.</p>
+                </div>
+
+                <div class="contact-info">
+                    <p><strong>البريد الإلكتروني:</strong> <a
+                            href="mailto:alhendal01@gmail.com">alhendal01@gmail.com</a></p>
+                    <p><strong>رقم الهاتف:</strong> 0096563635575</p>
+                </div>
+                <p>&copy; 2025 جميع الحقوق محفوظة لـ "شاي الصعيد"</p>
+
+            </div>
 
 
-
-
-
-
-
-
-    <section class="footer">
-        <h2>شاي الصعيد</h2>
-        <p>أفضل شاي من قلب الصعيد، طعم لا يُنسى</p>
-
-        <!-- تفاصيل إضافية -->
-        <div class="details">
-            <p>موقع "شاي الصعيد" هو وجهتك الأولى لتذوق أفضل أنواع الشاي التقليدي المستوحى من ثقافة الصعيد المصري. نحن
-                نقدم لك تجربة فريدة تتيح لك الاستمتاع بتذوق الشاي في أجواء أصيلة وأصيلة. نستخدم أجود أنواع الأوراق من
-                الأراضي الصعيدية لنتيح لك مذاقًا مميزًا وطبيعيًا.</p>
-            <p>يتميز شاي الصعيد بطعمه العميق والمميز الذي يعكس جودة الزراعة في الأراضي الخصبة وبدون إضافات صناعية. نحن
-                في "شاي الصعيد" نسعى لتقديم أفضل المنتجات التي تمثل تراثنا العريق في كل فنجان شاي.</p>
-            <p>كما نقدم خدمة توصيل ممتازة لجميع العملاء في أنحاء الجمهورية. إذا كان لديك أي استفسار أو تحتاج إلى
-                المساعدة، لا تتردد في التواصل معنا عبر الطرق التالية.</p>
         </div>
 
-        <!-- معلومات التواصل -->
-        <div class="contact-info">
-            <p><span>البريد الإلكتروني:</span> <a href="mailto:info@shayalsaeed.com"
-                    style="color: #f1f1f1;">info@shayalsaeed.com</a></p>
-            <p><span>رقم الهاتف:</span> +20 100 123 4567</p>
-            <p><span>العنوان:</span> شارع النيل، محافظة أسيوط، الصعيد، مصر</p>
-        </div>
 
-        <p>&copy; 2025 جميع الحقوق محفوظة</p>
+
+
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,111 +1,4 @@
-<!-- <div class="parent bg-info m-0 p-0 pt-5">
-
-  <div class="user-orders-wrapper ">
-    <h2 class="page-title pt-4 text-center">طلباتي السابقة</h2>
-    <p class="welcome-msg text-center">مرحبًا {{ userName }}! يمكنك مراجعة تفاصيل طلباتك أدناه.</p>
-
-    <div class="user-orders-container ">
-      <div *ngIf="orders.length > 0; else noOrders">
-        <div class="order-card " *ngFor="let order of orders">
-          <div class="order-header d-flex justify-content-between">
-            <div>
-              <h5 class="w-75">طلب رقم: {{ order.id }}</h5>
-
-            </div>
-            <p class="order-date w-25 text-start">{{ order.createdAt | date:'mediumDate' }}</p>
-          </div>
-          <div class="order-details">
-            <p><strong>الإجمالي:</strong> {{ order.totalAmount | currency:'EGP' }}</p>
-            <p><strong>الحالة:</strong>
-              <span [ngClass]="getOrderStatusClass(order.status)">
-                {{getOrderStatus(order.status)}}
-              </span>
-            </p>
-          </div>
-          <button class="details-btn" (click)="viewDetails(order)">عرض التفاصيل</button>
-        </div>
-      </div>
-
-      <ng-template #noOrders>
-        <p class="no-orders-msg">ليس لديك أي طلبات حاليًا. ابدأ التسوق الآن واستمتع بشاي الصعيد!</p>
-      </ng-template>
-    </div>
-
-    <div class="modal" *ngIf="selectedOrder">
-      <div class="modal-content p-4">
-        <span class="close-btn " (click)="closeDetails()">&times;</span>
-        <h3 class="pt-3">تفاصيل الطلب رقم: {{ selectedOrder.id }}</h3>
-        <p><strong>تاريخ الطلب:</strong> {{ selectedOrder.createdAt | date:'medium' }}</p>
-        <p><strong>الإجمالي:</strong> {{ selectedOrder.totalAmount | currency:'EGP' }}</p>
-        <p><strong>حالة الطلب:</strong> {{getOrderStatus(selectedOrder.status)}} </p>
-        <hr>
-        <h4>تفاصيل المنتجات:</h4>
-        <div class="products-list">
-          <ul>
-            <li *ngFor="let item of selectedOrder.items">
-               {{getProductName(item.productDetails.productId)}} - {{ item.quantity }} × {{ item.price | currency:'EGP ' }}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center">
-
-      <button class="btn home-btn  m-0 mt-4" (click)="goToHome()">العودة إلى الصفحة الرئيسية</button>
-    </div>
-  </div>
-
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="parent bg-info m-0 p-0 pt-5">
+<div class="parent m-0 p-0 pt">
 
   <div class="user-orders-wrapper">
     <h2 class="page-title pt-4 text-center">طلباتي السابقة</h2>
@@ -122,7 +15,7 @@
     <!-- هذا الـ ng-template سيظهر إذا كان هناك طلبات -->
     <ng-template #showOrders>
       <div class="user-orders-container">
-        <div *ngIf="orders.length > 0; else noOrders">
+        <div *ngIf="orders?.length > 0; else noOrders">
           <div class="order-card" *ngFor="let order of orders">
             <div class="order-header d-flex justify-content-between">
               <div>
@@ -131,7 +24,7 @@
               <p class="order-date w-25 text-start">{{ order.createdAt | date:'mediumDate' }}</p>
             </div>
             <div class="order-details">
-              <p><strong>الإجمالي:</strong> {{ order.totalAmount | currency:'EGP ' }}</p>
+              <p><strong>الإجمالي:</strong> {{ order.totalAmount | currency:'KWD ' }}</p>
               <p><strong>الحالة:</strong>
                 <span [ngClass]="getOrderStatusClass(order.status)">
                   {{getOrderStatus(order.status)}}
@@ -152,16 +45,16 @@
     <div class="modal" *ngIf="selectedOrder">
       <div class="modal-content p-4">
         <span class="close-btn " (click)="closeDetails()">&times;</span>
-        <h3 class="pt-3">تفاصيل الطلب رقم: {{ selectedOrder.id }}</h3>
+        <h3 class="pt-3 ">تفاصيل الطلب رقم: {{ selectedOrder.id }}</h3>
         <p><strong>تاريخ الطلب:</strong> {{ selectedOrder.createdAt | date:'medium' }}</p>
-        <p><strong>الإجمالي:</strong> {{ selectedOrder.totalAmount | currency:'EGP' }}</p>
+        <p><strong>الإجمالي:</strong> {{ selectedOrder.totalAmount | currency:'KWD' }}</p>
         <p><strong>حالة الطلب:</strong> {{getOrderStatus(selectedOrder.status)}} </p>
         <hr>
         <h4>تفاصيل المنتجات:</h4>
         <div class="products-list">
           <ul>
             <li *ngFor="let item of selectedOrder.items">
-               {{getProductName(item.productDetails.productId)}} - {{ item.quantity }} × {{ item.price | currency:'EGP ' }}
+               {{getProductName(item.productDetails.productId)}} - {{ item.quantity }} × {{ item.price | currency:'KWD ' }}
             </li>
           </ul>
         </div>

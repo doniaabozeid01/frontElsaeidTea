@@ -1,6 +1,5 @@
 .nav-link:hover {
     color: rgb(207, 207, 207) !important;
-    // color: rgb(206, 17, 17) !important;
 }
 
 .navbar {
@@ -14,22 +13,13 @@ nav {
 .logo {
     width: 70px;
     height: 70px;
-
-}
-
-
-.nav-item {
-    position: relative;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
-    /* أسفل الأيقونة */
     left: -50%;
-    // right:0; /* محاذاة لليمين */
-    // min-width: 100px;
     z-index: 10;
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
@@ -37,15 +27,8 @@ nav {
     text-align: right; /* محاذاة النص إلى اليمين */
 }
 
-.dropdown-menu a {
-    text-decoration: none;
-    color: inherit;
-    /* لتحافظ على لون النص الحالي */
-}
-
 .dropdown-menu a:hover {
     text-decoration: underline;
-    /* إذا أردت خطًا عند التحويم */
 }
 
 
@@ -53,26 +36,6 @@ nav {
     display: block;
     opacity: 1;
 }
-
-
-.dropdown-item {
-    color: inherit;
-    /* استخدام اللون الحالي للنص */
-    text-decoration: none;
-    /* إزالة الخط السفلي */
-}
-
-.dropdown-item:focus,
-.dropdown-item:active {
-    color: inherit;
-    /* إزالة اللون الأزرق */
-    background-color: #15ce40;
-    /* منع تغيير الخلفية */
-    outline: none;
-    /* إزالة الإطار */
-}
-
-
 
 /* للشاشات الكبيرة (ديسكتوب) */
 @media (min-width: 769px) {
@@ -88,104 +51,6 @@ nav {
         padding: 0px 70px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-// .parent {
-//     background-color: #ffffff; /* اللون الأبيض ليتماشى مع صفحة All Orders */
-//     height: 100vh;
-//     width: 100%;
-//     background-image: url('../../../assets/img.jpg');
-//     background-repeat: no-repeat;
-//     background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
-//     background-position: center; /* محاذاة الصورة في المنتصف */
-// }
-
-
-// .about-section {
-//     // background-color: #f4f4f4;
-//     padding: 60px 0;
-//     font-family: 'Arial', sans-serif;
-// }
-
-// .section-title {
-//     font-size: 2.5rem;
-//     color: #333;
-//     font-weight: 600;
-//     letter-spacing: 1px;
-//     margin-bottom: 30px;
-// }
-
-// .section-description {
-//     font-size: 1.1rem;
-//     color: #555;
-//     max-width: 800px;
-//     margin: 0 auto 40px auto;
-//     line-height: 1.6;
-// }
-
-// .about-card {
-//     background-color: #fff;
-//     padding: 20px;
-//     border-radius: 10px;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     text-align: center;
-//     transition: all 0.3s ease;
-// }
-
-// .about-card:hover {
-//     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-// }
-
-// .about-card img {
-//     max-width: 100%;
-//     height: auto;
-//     border-radius: 10px;
-// }
-
-// .about-card h3 {
-//     font-size: 1.4rem;
-//     color: #2c3e50;
-//     margin-top: 20px;
-//     font-weight: 500;
-// }
-
-// .about-card p {
-//     font-size: 1rem;
-//     color: #7f8c8d;
-//     margin-top: 15px;
-//     line-height: 1.5;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .parent {
     background-color: #f9f5e3; /* لون خلفية فاتح ليظهر العناصر بشكل واضح */
@@ -282,40 +147,6 @@ nav {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .logo {
     display: flex;
     justify-content: center; /* للتوسيط الأفقي */
@@ -333,35 +164,6 @@ li.nav-item::marker {
     content: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.dropdown-menu {
-    width: auto; /* ليكون العرض على قد المحتوى */
-    min-width: 150px; /* يمكن تعديل الحد الأدنى للعرض حسب الحاجة */
-}
-
-.dropdown-item {
-    white-space: nowrap; /* منع التفاف النص داخل الرابط */
-}
-
-
 @media (max-width:768px) {
     .dropdown-menu {
         left: -30%;
@@ -372,5 +174,42 @@ li.nav-item::marker {
 }
 
 .navbar-toggler{
-    font-size: 18px;
+    font-size: 16px;
 }
+
+/* إخفاء النقاط من القوائم */
+.navbar-nav {
+    list-style-type: none; /* إزالة النقاط */
+    padding-left: 0; /* إزالة المسافة الداخلية */
+}
+
+
+ul, ol {
+    list-style-type: none; /* إخفاء النقاط */
+    padding-left: 0; /* إزالة المسافة الافتراضية من الجهة اليسرى */
+
+
+  }
+  
+  ul,
+ol {
+    list-style-type: none;
+    /* إخفاء النقاط */
+    padding-left: 0;
+    /* إزالة المسافة الافتراضية من الجهة اليسرى */
+    list-style: none !important;
+
+}
+
+ul {
+    list-style: none !important; /* إزالة النقاط */
+    padding: 0; /* إزالة المسافات الداخلية */
+    margin: 0; /* إزالة المسافات الخارجية */
+}
+
+li {
+    list-style-type: none !important; /* تأكيد إزالة النقاط */
+    padding: 0;
+    margin: 0;
+}
+

@@ -2,7 +2,7 @@
     <div class="container-fluid setPadding">
         <div class="d-flex justify-content-center align-items-center">
             <div class="logo" [routerLink]="'/home'" role="button">
-                <img src="../../../assets/logo.png" class="w-100" alt="">
+                <img src="./assets/logo.png" class="w-100" alt="">
             </div>
             <a class="navbar-brand fs-4 text-white ms-3" routerLink="/home">شاي الصعيد</a>
         </div>
@@ -32,7 +32,7 @@
                     <i class="nav-link fa-solid fa-user fs-5 text-white" routerLinkActive="active-link"
                         routerLink="/login"></i>
                     <div class="dropdown-menu shadow-sm bg-white text-dark p-3 rounded">
-                        <p class="fw-bold fs-5 mb-2">أحمد محمد</p>
+                        <p class="fw-bold fs-5 mb-2">{{fullName}}</p>
                         <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
                         <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">تسجيل الخروج</a>
                     </div>
@@ -50,14 +50,14 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center w-100" style="flex-direction: row-reverse;">
             <!-- الأيقونات على اليسار (التي كانت في اليمين سابقًا) -->
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-end">
                 <li class="nav-item">
-                    <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white ms-3" routerLink="/cart"></i>
+                    <i class="nav-link fa-solid fa-cart-shopping fs-5 text-white ms-2" routerLink="/cart"></i>
                 </li>
                 <li class="nav-item position-relative">
-                    <i class="nav-link fa-solid fa-user fs-5 text-white ms-3" routerLink="/login"></i>
+                    <i class="nav-link fa-solid fa-user fs-5 text-white " routerLink="/login"></i>
                     <div class="dropdown-menu bg-white text-dark p-3 w-auto rounded">
-                        <p class="fw-bold fs-5 mb-2 p-0 m-0">أحمد محمد</p>
+                        <p class="fw-bold fs-5 mb-2 p-0 m-0">{{fullName}}</p>
                         <a class="dropdown-item fw-semibold px-2 rounded" (click)="signIn()">تسجيل الدخول</a>
                         <a class="dropdown-item fw-semibold px-2 rounded mb-2" (click)="signOut()">تسجيل الخروج</a>
                     </div>
@@ -68,7 +68,7 @@
             <!-- الشعار في المنتصف -->
             <div class="logo d-flex justify-content-center align-items-center" [routerLink]="'/home'" role="button">
                 <p class="p-0 m-0 text-white ">شاي</p>
-                <img src="../../../assets/logo.png" class="logo-img " alt="Logo">
+                <img src="./assets/logo.png" class="logo-img " alt="Logo">
                 <p class="p-0 m-0 text-white">الصعيد</p>
             </div>
 
@@ -103,112 +103,6 @@
 
 
 
-
-
-
-
-
-
-
-
-<!-- <div class="parent pt-5 ">
-
-    <section id="about" class="about-section p-0 m-0 mt-5 pt-4">
-        
-        
-        
-        <div class="container text-center">
-            <h2 class="section-title mb-4">عن شاي الصعيد</h2>
-            <p class="section-description mb-5">
-                شاي الصعيد هو الخيار المثالي لكل من يبحث عن النكهة الأصيلة والجودة العالية. نحرص على تقديم شاي يتميز بالتقاليد المصرية العريقة. جربه الآن واستمتع بكل لحظة.
-            </p>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="about-card">
-                        <img src="../../../assets/2.jpg" alt="شاي طبيعي" class="img-fluid mb-3">
-                        <h3>شاي طبيعي</h3>
-                        <p>نستخدم أوراق شاي طبيعية بنسبة 100% للحصول على أفضل نكهة.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="about-card">
-                        <img src="../../../assets/22.jpg" alt="نكهة أصيلة" class="img-fluid mb-3">
-                        <h3>نكهة أصيلة</h3>
-                        <p>نكهة تجمع بين الأصالة والتميز، تعكس تقاليد الشاي المصري العريق.</p>
-                    </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="about-card">
-                    <img src="../../../assets/2.jpg" alt="منتج ذو جودة عالية" class="img-fluid mb-3">
-                    <h3>جودة عالية</h3>
-                    <p>نحن نقدم لك شايًا بجودة عالية وبأفضل الممارسات التي تضمن لك تجربة مميزة.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-</div> -->
-
-
-
-
-
-<!-- https://www.pinterest.com/pin/563512972145541889/   --  reels to tea    -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="parent py-5">
 
     <section id="about" class="about-section m-auto p-0 m-0 my-5 pt-4 ">
@@ -221,21 +115,21 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="about-card">
-                        <img src="../../../assets/2.jpg" alt="شاي طبيعي" class="img-fluid mb-3">
+                        <img src="./assets/aniketh-kanukurthi-Qaor6nxikUM-unsplash.jpg" alt="شاي طبيعي" class="img-fluid mb-3">
                         <h3>شاي طبيعي</h3>
                         <p>نستخدم أوراق شاي طبيعية بنسبة 100% للحصول على أفضل نكهة.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="about-card">
-                        <img src="../../../assets/22.jpg" alt="نكهة أصيلة" class="img-fluid mb-3">
+                        <img src="./assets/devin-avery-qlCWyH6C1aI-unsplash.jpg" alt="نكهة أصيلة" class="img-fluid mb-3">
                         <h3>نكهة أصيلة</h3>
                         <p>نكهة تجمع بين الأصالة والتميز، تعكس تقاليد الشاي المصري العريق.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="about-card">
-                        <img src="../../../assets/2.jpg" alt="منتج ذو جودة عالية" class="img-fluid mb-3">
+                        <img src="./assets/akhilesh-sharma-6xtK1Pn-PTI-unsplash.png" alt="منتج ذو جودة عالية" class="img-fluid mb-3">
                         <h3>جودة عالية</h3>
                         <p>نحن نقدم لك شايًا بجودة عالية وبأفضل الممارسات التي تضمن لك تجربة مميزة.</p>
                     </div>

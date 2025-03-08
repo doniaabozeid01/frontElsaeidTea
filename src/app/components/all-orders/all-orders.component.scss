@@ -8,13 +8,6 @@
   background-position: center; /* محاذاة الصورة في المنتصف */
 }
 
-
-
-
-
-
-
-/* الحاوية الكاملة للمحتوى */
 .user-orders-wrapper {
   position: relative;
   max-width: 800px;
@@ -24,26 +17,19 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   padding-bottom: 60px;
-  /* لضمان وجود مساحة أسفل المحتوى للزر */
   border: 1px solid greenyellow;
-
 }
 
-/* الحاوية التي تحتوي على البيانات القابلة للتمرير */
 .user-orders-container {
   padding: 20px;
   max-height: 600px;
-  /* الحد الأقصى للارتفاع */
   overflow-y: scroll;
-  /* تمكين التمرير العمودي */
 }
-
 
 .user-orders-container::-webkit-scrollbar {
   width: 0px;
 }
 
-/* زر العودة */
 .home-btn {
   background-color: #4caf50;
   color: white;
@@ -52,43 +38,12 @@
   cursor: pointer;
   margin-top: 20px;
   text-align: center;
-
 }
 
 .home-btn:hover {
   background-color: #39863d;
 }
 
-/* نمط الـ modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-  position: relative;
-}
-
-.close-btn {
-  position: absolute;
-  top: 0px;
-  // right: 10px;
-  font-size: 30px;
-  cursor: pointer;
-}
 
 .order-card {
   background-color: #ffffff;
@@ -106,17 +61,6 @@
   background-color: #d9ffd2; /* تأثير hover بلون أفتح */
 }
 
-
-
-.order-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.order-details p {
-  margin: 5px 0;
-}
 
 .confirmed {
   color: green;
@@ -154,90 +98,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* نمط الـ modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-/* محتوى الـ modal */
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-  position: relative;
-  max-height: 80vh;
-  /* تحديد الطول الأقصى */
-  overflow-y: auto;
-  /* تمكين التمرير عموديًا */
-}
-
-/* باقي النمط كما هو */
-.close-btn {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  font-size: 30px;
-  cursor: pointer;
-}
-
 .products-list {
   max-height: 300px;
-  /* تحديد أقصى ارتفاع لقائمة المنتجات */
   overflow-y: auto;
-  /* تمكين التمرير إذا زادت العناصر */
 }
-
-
-
-
-
-
-
 
 .page-title {
   color: #4caf50;
 }
 
-
-
-
-/* نمط الـ modal */
 .modal {
   position: fixed;
   top: 0;
@@ -251,7 +120,6 @@
   z-index: 9999;
 }
 
-/* محتوى الـ modal */
 .modal-content {
   background-color: #fff;
   padding: 20px;
@@ -260,14 +128,10 @@
   max-width: 600px;
   position: relative;
   max-height: 80vh;
-  /* تحديد الطول الأقصى */
   overflow-y: auto;
-  /* تمكين التمرير عموديًا */
   padding-right: 10px;
-  /* لتفادي تصادم التمرير مع النص */
 }
 
-/* باقي النمط كما هو */
 .close-btn {
   position: absolute;
   top: 0px;
@@ -278,11 +142,8 @@
 
 .products-list {
   max-height: 300px;
-  /* تحديد أقصى ارتفاع لقائمة المنتجات */
   overflow-y: auto;
-  /* تمكين التمرير إذا زادت العناصر */
   padding-right: 10px;
-  /* لتفادي تصادم التمرير مع النص */
 }
 
 
@@ -303,8 +164,6 @@
 @media (max-width:480px) {
   .user-orders-container {
     max-height: 550px;
-    /* الحد الأقصى للارتفاع */
-    /* تمكين التمرير العمودي */
   }
   
 }
@@ -318,4 +177,16 @@
 
 .msgBtn:hover{
   color: black!important;
+}
+
+
+.pt {
+  padding-top: 48px!important;
+}
+
+@media (max-width:768px) {
+
+  .pt {
+    padding-top: 20px!important;
+  }
 }

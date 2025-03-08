@@ -1,16 +1,16 @@
-<div class="w-100 parent pt-5">
+<div class="w-100 parent pt">
     <div class="product-details mb-5">
         <div class="product-info">
-            <img src="../../../assets/c2741a1e-08de-4888-8a00-febbb8bd3324.jpg" alt="منتج شاي الصعيد"
-                class="product-image">
-            <h2 class="product-title">{{product.name}}</h2>
-            <p class="product-description">{{product.description}}</p>
+            <!-- <img src="./assets/c2741a1e-08de-4888-8a00-febbb8bd3324.jpg" alt="منتج شاي الصعيد" class="product-image"> -->
+            <img src="./assets/50-01.jpg" alt="منتج شاي الصعيد" class="product-image">
+            <h2 class="product-title">{{product?.name || 'شاي الصعيد'}}</h2>
+            <p class="product-description">{{product?.description}}</p>
         </div>
 
         <div class="product-size">
             <h3>اختر الحجم:</h3>
             <select [(ngModel)]="selectedSize" (change)="updatePrice()" class="size-select">
-                <option *ngFor="let productDetail of product.details" [value]="productDetail.id">
+                <option *ngFor="let productDetail of product?.details" [value]="productDetail.id">
                     {{productDetail.weight}} مللي
                 </option>
             </select>

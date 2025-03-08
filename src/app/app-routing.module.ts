@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ViewProductComponent } from './components/view-product/view-product.component';
-import { ShopComponent } from './components/shop/shop.component';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -12,13 +10,11 @@ import { AllOrdersComponent } from './components/all-orders/all-orders.component
 import { AboutComponent } from './components/about/about.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { authenticationGuard } from './guard/authentication.guard';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 const routes: Routes = [
 
-  // {path:'' , redirectTo:'/home' , pathMatch:'full'},
-  // {path:'home' , component : HomeComponent},
-  // {path:'viewProduct' , component : ViewProductComponent},
-  // {path:'Shop' , component : ShopComponent},
   {path:'home' , component : HomeComponent},
   {path:'about' , component : AboutComponent},
   {path:'login' , component : AuthComponent},
@@ -27,7 +23,11 @@ const routes: Routes = [
   {path:'product-details' , component : ProductDetailsComponent},
   {path:'payment' , component : PaymentComponent, canActivate: [authenticationGuard]},
   {path:'allorders' , component : AllOrdersComponent},
-  { path: '', component: HomeComponent }
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'resetPassword', component: ResetPasswordComponent },
+  { path: '', component: HomeComponent },
+  {path:'**' , component : AuthComponent}
+
 
 ];
 
@@ -36,7 +36,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-
-
-
 }

@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 /* استيراد الخطوط من Google Fonts باستخدام @import */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
 
 body {
     direction: rtl;
@@ -8,6 +11,12 @@ body {
     text-align: right;
     /* محاذاة النصوص إلى اليمين */
     font-family: 'Tajawal', Arial, sans-serif;
+    // font-family: "Cairo", serif;
+    //   font-family: "Amiri", serif;
+
+    // font-family: "Tajawal", serif;
+    // font-family: "Reem Kufi", serif;
+
     /* خط مناسب للغة العربية */
 }
 
@@ -24,38 +33,43 @@ i {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* استخدم الخطوط في الموقع */
 body {
     font-family: 'Cairo', sans-serif!important;
+    // font-family: "Cairo", serif;
+    //   font-family: "Amiri", serif;
+
+    // font-family: "Tajawal", serif;
+    // font-family: "Reem Kufi", serif;
+
+
 }
 
 h4,
 h5 {
     font-family: 'Cairo', sans-serif!important;
+    // font-family: "Cairo", serif;
+    //   font-family: "Amiri", serif;
+
+    // font-family: "Tajawal", serif;
+    // font-family: "Reem Kufi", serif;
+
+
 }
 
 /* تخصيص الخط للعناوين */
 h1,
 h2,
-h3, button {
+h3,
+button {
     font-family: 'Cairo', sans-serif!important;
+    // font-family: "Cairo", serif;
+    //   font-family: "Amiri", serif;
+
+    // font-family: "Tajawal", serif;
+    // font-family: "Reem Kufi", serif;
+
+
     font-weight: 600;
 }
 
@@ -63,6 +77,13 @@ h3, button {
 p,
 span,
 li,
-a {
+a ,label,div{
     font-family: 'Cairo', sans-serif!important;
+    // font-family: "Cairo", serif;
+    //   font-family: "Amiri", serif;
+
+    // font-family: "Tajawal", serif;
+    // font-family: "Reem Kufi", serif;
+
+
 }

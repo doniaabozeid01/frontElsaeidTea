@@ -1,9 +1,9 @@
-<div class="parent bg-info p-0 m-0 pt-5">
+<div class="parent bg-info p-0 m-0 pt">
   <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
     <h2 class="checkout-title">تفاصيل الدفع عند الاستلام</h2>
 
     <div class="form-group">
-      <label for="address">العنوان</label>
+      <label for="address">العنوان <span class="text-danger">*</span></label>
       <input id="address" type="text" formControlName="address" class="form-control" />
       <div *ngIf="orderForm.get('address')?.invalid && orderForm.get('address')?.touched" class="text-danger">
         العنوان مطلوب.
@@ -11,7 +11,7 @@
     </div>
 
     <div class="form-group">
-      <label for="city">المدينة</label>
+      <label for="city">المدينة <span class="text-danger">*</span></label>
       <input id="city" type="text" formControlName="city" class="form-control" />
       <div *ngIf="orderForm.get('city')?.invalid && orderForm.get('city')?.touched" class="text-danger">
         المدينة مطلوبة.
@@ -19,7 +19,7 @@
     </div>
 
     <div class="form-group">
-      <label for="country">البلد</label>
+      <label for="country">البلد <span class="text-danger">*</span></label>
       <input id="country" type="text" formControlName="country" class="form-control" />
       <div *ngIf="orderForm.get('country')?.invalid && orderForm.get('country')?.touched" class="text-danger">
         البلد مطلوب.
@@ -27,15 +27,15 @@
     </div>
 
     <div class="form-group">
-      <label for="phone">رقم الهاتف</label>
+      <label for="phone">رقم الهاتف <span class="text-danger">*</span></label>
       <input id="phone" type="tel" formControlName="phoneNumber" class="form-control" />
-      <div *ngIf="orderForm.get('phone')?.invalid && orderForm.get('phoneNumber')?.touched" class="text-danger">
+      <div *ngIf="orderForm.get('phoneNumber')?.invalid && orderForm.get('phoneNumber')?.touched" class="text-danger">
         رقم الهاتف مطلوب ويجب أن يكون صحيحًا.
       </div>
     </div>
 
     <div class="form-group">
-      <label for="confirmPhone">تأكيد رقم الهاتف</label>
+      <label for="confirmPhone">تأكيد رقم الهاتف <span class="text-danger">*</span></label>
       <input id="confirmPhone" type="tel" formControlName="confirmPhone" class="form-control" />
       <div *ngIf="orderForm.get('confirmPhone')?.invalid && orderForm.get('confirmPhone')?.touched" class="text-danger">
         يجب أن يكون رقم الهاتف مؤكدًا.
@@ -46,7 +46,7 @@
     </div>
 
     <div class="form-group">
-      <label for="paymentMethod">طريقة الدفع</label>
+      <label for="paymentMethod">طريقة الدفع <span class="text-danger">*</span></label>
       <select id="paymentMethod" formControlName="paymentMethod" class="form-control">
         <option value="cash">الدفع عند الاستلام</option>
       </select>
